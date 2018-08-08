@@ -1,0 +1,25 @@
+{
+  "name": "super-plansza",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:szagi3891/super-plansza.git",
+  "author": "Grzegorz Szeliga <szeligagrzegorz@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^16.4.8",
+    "@types/react-dom": "^16.0.7",
+    "awesome-typescript-loader": "^5.2.0",
+    "http-server": "^0.11.1",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "typescript": "^3.0.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0"
+  },
+  "scripts": {
+    "rm-dist": "rm -Rf ./docs",
+    "build-dev": "yarn run rm-dist && webpack --config ./webpack/webpack.js --mode development && cp ./src/index.html ./docs/",
+    "server": "yarn run http-server ./docs"
+  }
+}
