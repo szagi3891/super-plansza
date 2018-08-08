@@ -3,6 +3,7 @@ import styled from 'react-emotion';
 import * as Color from 'color';
 import './Reset.tsx';
 import { MainPageIntro } from './MainPageIntro/MainPageIntro';
+import { Menu } from './Menu/Menu';
 
 const react_logo = require('./react-icon.svg');
 
@@ -58,6 +59,10 @@ export class App extends React.PureComponent<PropsType> {
         return (
             <Background>
                 <Wrapper>
+                    <Row>
+                        <Menu />
+                    </Row>
+
                     <Row>
                         <MainPageIntro />
                     </Row>
