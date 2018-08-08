@@ -1,43 +1,10 @@
 import * as React from 'react';
-import styled, { injectGlobal } from 'react-emotion';
+import styled from 'react-emotion';
 import * as Color from 'color';
+import './Reset.tsx';
+import { MainPageIntro } from './MainPageIntro/MainPageIntro';
+
 const react_logo = require('./react-icon.svg');
-
-injectGlobal `
-html,
-body,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-figure,
-blockquote,
-p {
-  margin: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-a {
-  color: currentColor;
-  text-decoration: none;
-}
-
-a:hover,
-a:focus {
-  color: currentColor;
-  text-decoration: none;
-}
-`;
 
 const colorBackground = '#ffd536';
 var colorMainColumn = Color(colorBackground).lighten(0.5);
@@ -58,6 +25,30 @@ const Logo = styled('img')`
     height: 50px;
 `;
 
+const Row = styled('div')`
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+`;
+
+interface MessageImgPropsType {
+    extraMargin: 'right' | 'left',
+}
+const MessageImg = styled('img')<MessageImgPropsType>`
+    width: 300px;
+    flex-shrink: 0;
+    ${ props => props.extraMargin === 'left' ? 'margin-left: 10px;' : 'margin-right: 10px;'}
+`;
+
+const MessageText = styled('div')`
+    flex-grow: 1;
+`;
+
+const imgMock = 'https://www.matczynefanaberie.pl/wp-content/uploads/2017/10/Gry-planszowe-o-dinozaurach-940x788.png';
+
+
 interface PropsType {
     label: string,
 }
@@ -67,6 +58,30 @@ export class App extends React.PureComponent<PropsType> {
         return (
             <Background>
                 <Wrapper>
+                    <Row>
+                        <MainPageIntro />
+                    </Row>
+
+                    <Row>
+                        <MessageImg src={imgMock} extraMargin="right" />
+                        <MessageText>
+                            <p>Czym są nowoczesne gry planszowe?</p>
+                            <p>Nowoczesne gry planszowe to przede wszystkim bardzo dobry sposób na spędzanie wolnego czasu a ponadto: przygoda, emocje, rozwój logicznego myślenia</p>
+                        </MessageText>
+                    </Row>
+
+                    <Row>
+                        <MessageText>
+                            <p>Jak wyglądają zajęcia ?</p>
+                            <p>- trwają 2 godziny</p>
+                            <p>- zasiadamy do ławek</p>
+                            <p>- tłumaczone są wszystkim zasady gry</p>
+                            <p>- gramy tylko i wyłącznie w najlepsze gry</p>
+                            <p>- w drugiej części zajęć chętni grają turniej, pozostali grają w ulubione gry</p>
+                        </MessageText>
+                        <MessageImg src={imgMock} extraMargin="left" />
+                    </Row>
+
                     <div>
                         <Logo src={react_logo} />
                     </div>
