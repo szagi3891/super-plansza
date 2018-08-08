@@ -660,7 +660,7 @@ eval("module.exports = __webpack_require__.p + \"df23a7d86cfadcda4fc99cd589f6889
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\nvar App_1 = __webpack_require__(/*! ./App/App */ \"./src/App/App.tsx\");\nvar root = document.getElementById('root');\nif (root) {\n    ReactDOM.render(React.createElement(App_1.App, { label: \"dd\" }), root);\n}\nconsole.info('Start');\nvar ff = function (dd) {\n    console.info(\"FF \" + dd);\n};\nff('33');\n\n\n//# sourceURL=webpack:///./src/index.tsx?");
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar ReactDOM = __webpack_require__(/*! react-dom */ \"./node_modules/react-dom/index.js\");\nvar App_1 = __webpack_require__(/*! ./App/App */ \"./src/App/App.tsx\");\nvar root = document.getElementById('root');\nif (root) {\n    ReactDOM.render(React.createElement(App_1.App, { label: \"dd\" }), root);\n}\n\n\n//# sourceURL=webpack:///./src/index.tsx?");
 
 /***/ })
 
