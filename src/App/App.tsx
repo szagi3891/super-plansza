@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled, { injectGlobal } from 'react-emotion';
 import * as Color from 'color';
+const react_logo = require('./react-icon.svg');
 
 injectGlobal `
 html,
@@ -13,7 +14,7 @@ ul {
 figure,
 blockquote,
 p {
-  margin: 0
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -52,6 +53,11 @@ const Wrapper = styled('div')`
     min-height: 100vh;
 `
 
+const Logo = styled('img')`
+    width: 50px;
+    height: 50px;
+`;
+
 interface PropsType {
     label: string,
 }
@@ -61,6 +67,10 @@ export class App extends React.PureComponent<PropsType> {
         return (
             <Background>
                 <Wrapper>
+                    <div>
+                        <Logo src={react_logo} />
+                    </div>
+
                     { this.renderContent() }
                 </Wrapper>
             </Background>

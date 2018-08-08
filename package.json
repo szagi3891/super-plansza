@@ -12,6 +12,7 @@
     "awesome-typescript-loader": "^5.2.0",
     "color": "^3.0.0",
     "emotion": "^9.2.6",
+    "file-loader": "^1.1.11",
     "http-server": "^0.11.1",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
