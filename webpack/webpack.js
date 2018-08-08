@@ -6,7 +6,7 @@ module.exports = [
         mode: 'client',
         src: '../src',
         dist: '../docs/static',
-        publicPath: '/static/',
+        publicPath: 'static/',
         tsconfig: '../tsconfig.json',
         entry: '../src/index.tsx',
         outFileName: 'index.js'
