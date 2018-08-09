@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
 import * as Color from 'color';
+import { Link } from 'react-router-dom';
 
 const menuColor = '#e0e0e0';
 const menuColorHover = Color(menuColor).alpha(.5).string();
@@ -10,7 +11,7 @@ const Wrapper = styled('div')`
     flex-direction: row;
 `;
 
-const Item = styled('div')`
+const Item = styled('span')`
     border: 1px solid black;
     padding: 5px;
     margin: 5px;
@@ -28,10 +29,10 @@ export class Menu extends React.PureComponent {
     render() {
         return (
             <Wrapper>
-                <Item>Strona główna</Item>
-                <Item>Zapisz się!</Item>
-                <Item>Ankieta</Item>
-                <Item>Aktualności</Item>
+                <Link to="/"><Item>Strona główna</Item></Link>
+                <Link to="/zapisz-sie"><Item>Zapisz się!</Item></Link>
+                <Link to="/ankieta"><Item>Ankieta</Item></Link>
+                <Link to="/aktualnosci"><Item>Aktualności</Item></Link>
             </Wrapper>
         );
     }

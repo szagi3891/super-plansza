@@ -2,10 +2,14 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import * as Color from 'color';
 import './Reset.tsx';
-import { MainPageIntro } from './MainPageIntro/MainPageIntro';
 import { Menu } from './Menu/Menu';
+import { Route } from 'react-router'
+import { Switch, HashRouter } from 'react-router-dom';
+import { Row } from './Utils';
+import { Home } from './Page/Home/Home';
+import { Header } from './Header/Header';
 
-const react_logo = require('./react-icon.svg');
+//const react_logo = require('./react-icon.svg');
 
 const colorBackground = '#ffd536';
 var colorMainColumn = Color(colorBackground).lighten(0.5);
@@ -19,94 +23,59 @@ const Wrapper = styled('div')`
     margin: 0 auto;
     background-color: ${colorMainColumn.string()};
     min-height: 100vh;
-`
-
-const Logo = styled('img')`
-    width: 50px;
-    height: 50px;
 `;
-
-const Row = styled('div')`
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: row;
-`;
-
-interface MessageImgPropsType {
-    extraMargin: 'right' | 'left',
-}
-const MessageImg = styled('img')<MessageImgPropsType>`
-    width: 300px;
-    flex-shrink: 0;
-    ${ props => props.extraMargin === 'left' ? 'margin-left: 10px;' : 'margin-right: 10px;'}
-`;
-
-const MessageText = styled('div')`
-    flex-grow: 1;
-`;
-
-const imgMock = 'https://www.matczynefanaberie.pl/wp-content/uploads/2017/10/Gry-planszowe-o-dinozaurach-940x788.png';
-
 
 interface PropsType {
     label: string,
 }
 
+const ZapiszSie = () => {
+    return (
+        <Row>
+            <div>Zapisz się ...</div>
+        </Row>
+    );
+};
+
+const Ankieta = () => {
+    return (
+        <Row>
+            <div>Ankieta ...</div>
+        </Row>
+    );
+};
+
+const Aktualnosci = () => {
+    return (
+        <Row>
+            <div>Aktualnosci ...</div>
+        </Row>
+    );
+};
+
 export class App extends React.PureComponent<PropsType> {
     render() {
         return (
-            <Background>
-                <Wrapper>
-                    <Row>
-                        <Menu />
-                    </Row>
+            <HashRouter>
+                <Background>
+                    <Wrapper>
+                        <Row>
+                            <Header />
+                        </Row>
+                        <Row>
+                            <Menu />
+                        </Row>
 
-                    <Row>
-                        <MainPageIntro />
-                    </Row>
+                        <Switch>
+                            <Route path="/" exact component={Home} />
+                            <Route path='/zapisz-sie' component={ZapiszSie} />
+                            <Route path='/ankieta' component={Ankieta} />
+                            <Route path='/aktualnosci' component={Aktualnosci} />
+                        </Switch>
 
-                    <Row>
-                        <MessageImg src={imgMock} extraMargin="right" />
-                        <MessageText>
-                            <p>Czym są nowoczesne gry planszowe?</p>
-                            <p>Nowoczesne gry planszowe to przede wszystkim bardzo dobry sposób na spędzanie wolnego czasu a ponadto: przygoda, emocje, rozwój logicznego myślenia</p>
-                        </MessageText>
-                    </Row>
-
-                    <Row>
-                        <MessageText>
-                            <p>Jak wyglądają zajęcia ?</p>
-                            <p>- trwają 2 godziny</p>
-                            <p>- zasiadamy do ławek</p>
-                            <p>- tłumaczone są wszystkim zasady gry</p>
-                            <p>- gramy tylko i wyłącznie w najlepsze gry</p>
-                            <p>- w drugiej części zajęć chętni grają turniej, pozostali grają w ulubione gry</p>
-                        </MessageText>
-                        <MessageImg src={imgMock} extraMargin="left" />
-                    </Row>
-
-                    <div>
-                        <Logo src={react_logo} />
-                    </div>
-
-                    { this.renderContent() }
-                </Wrapper>
-            </Background>
+                    </Wrapper>
+                </Background>
+            </HashRouter>
         );
-    }
-    private renderContent() {
-        const out = [];
-
-        for (let i=0; i<100; i++) {
-            out.push((
-                <p key={i}>
-                    App ... { this.props.label} { i}
-                </p>
-            ))
-        }
-
-        return out;
     }
 }
