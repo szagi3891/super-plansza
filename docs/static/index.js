@@ -1103,7 +1103,7 @@ eval("var g;\n\n// This works in non-strict mode\ng = (function() {\n\treturn th
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {\n    if (Object.defineProperty) { Object.defineProperty(cooked, \"raw\", { value: raw }); } else { cooked.raw = raw; }\n    return cooked;\n};\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar react_emotion_1 = __webpack_require__(/*! react-emotion */ \"./node_modules/react-emotion/dist/index.esm.js\");\nvar Color = __webpack_require__(/*! color */ \"./node_modules/color/index.js\");\n__webpack_require__(/*! ./Reset.tsx */ \"./src/App/Reset.tsx\");\nvar Menu_1 = __webpack_require__(/*! ./Menu/Menu */ \"./src/App/Menu/Menu.tsx\");\nvar react_router_1 = __webpack_require__(/*! react-router */ \"./node_modules/react-router/es/index.js\");\nvar react_router_dom_1 = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\nvar Utils_1 = __webpack_require__(/*! ./Utils */ \"./src/App/Utils.tsx\");\nvar Home_1 = __webpack_require__(/*! ./Page/Home/Home */ \"./src/App/Page/Home/Home.tsx\");\nvar Header_1 = __webpack_require__(/*! ./Header/Header */ \"./src/App/Header/Header.tsx\");\n//const react_logo = require('./react-icon.svg');\nvar colorBackground = '#ffd536';\nvar colorMainColumn = Color(colorBackground).lighten(0.5);\nvar Background = react_emotion_1.default('div')(templateObject_1 || (templateObject_1 = __makeTemplateObject([\"\\n    background-color: \", \";\\n\"], [\"\\n    background-color: \", \";\\n\"])), colorBackground);\nvar Wrapper = react_emotion_1.default('div')(templateObject_2 || (templateObject_2 = __makeTemplateObject([\"\\n    width: 1024px;\\n    margin: 0 auto;\\n    background-color: \", \";\\n    min-height: 100vh;\\n\"], [\"\\n    width: 1024px;\\n    margin: 0 auto;\\n    background-color: \", \";\\n    min-height: 100vh;\\n\"])), colorMainColumn.string());\nvar ZapiszSie = function () {\n    return (React.createElement(Utils_1.Row, null,\n        React.createElement(\"div\", null, \"Zapisz si\\u0119 ...\")));\n};\nvar Ankieta = function () {\n    return (React.createElement(Utils_1.Row, null,\n        React.createElement(\"div\", null, \"Ankieta ...\")));\n};\nvar Aktualnosci = function () {\n    return (React.createElement(Utils_1.Row, null,\n        React.createElement(\"div\", null, \"Aktualnosci ...\")));\n};\nvar App = /** @class */ (function (_super) {\n    __extends(App, _super);\n    function App() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    App.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.HashRouter, null,\n            React.createElement(Background, null,\n                React.createElement(Wrapper, null,\n                    React.createElement(Utils_1.Row, null,\n                        React.createElement(Header_1.Header, null)),\n                    React.createElement(Utils_1.Row, null,\n                        React.createElement(Menu_1.Menu, null)),\n                    React.createElement(react_router_dom_1.Switch, null,\n                        React.createElement(react_router_1.Route, { path: \"/\", exact: true, component: Home_1.Home }),\n                        React.createElement(react_router_1.Route, { path: '/zapisz-sie', component: ZapiszSie }),\n                        React.createElement(react_router_1.Route, { path: '/ankieta', component: Ankieta }),\n                        React.createElement(react_router_1.Route, { path: '/aktualnosci', component: Aktualnosci }))))));\n    };\n    return App;\n}(React.PureComponent));\nexports.App = App;\nvar templateObject_1, templateObject_2;\n\n\n//# sourceURL=webpack:///./src/App/App.tsx?");
+eval("\nvar __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {\n    if (Object.defineProperty) { Object.defineProperty(cooked, \"raw\", { value: raw }); } else { cooked.raw = raw; }\n    return cooked;\n};\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar react_emotion_1 = __webpack_require__(/*! react-emotion */ \"./node_modules/react-emotion/dist/index.esm.js\");\nvar Color = __webpack_require__(/*! color */ \"./node_modules/color/index.js\");\n__webpack_require__(/*! ./Reset.tsx */ \"./src/App/Reset.tsx\");\nvar Menu_1 = __webpack_require__(/*! ./Menu/Menu */ \"./src/App/Menu/Menu.tsx\");\nvar react_router_1 = __webpack_require__(/*! react-router */ \"./node_modules/react-router/es/index.js\");\nvar react_router_dom_1 = __webpack_require__(/*! react-router-dom */ \"./node_modules/react-router-dom/es/index.js\");\nvar Utils_1 = __webpack_require__(/*! ./Utils */ \"./src/App/Utils.tsx\");\nvar Home_1 = __webpack_require__(/*! ./Page/Home/Home */ \"./src/App/Page/Home/Home.tsx\");\nvar Header_1 = __webpack_require__(/*! ./Header/Header */ \"./src/App/Header/Header.tsx\");\n//const react_logo = require('./react-icon.svg');\nvar colorBackground = '#ffd536';\nvar colorMainColumn = Color(colorBackground).lighten(0.5);\nvar Background = react_emotion_1.default('div')(templateObject_1 || (templateObject_1 = __makeTemplateObject([\"\\n    background-color: \", \";\\n\"], [\"\\n    background-color: \", \";\\n\"])), colorBackground);\nvar Wrapper = react_emotion_1.default('div')(templateObject_2 || (templateObject_2 = __makeTemplateObject([\"\\n    width: 1024px;\\n    margin: 0 auto;\\n    background-color: \", \";\\n    min-height: 100vh;\\n    padding-top: 20px;\\n\"], [\"\\n    width: 1024px;\\n    margin: 0 auto;\\n    background-color: \", \";\\n    min-height: 100vh;\\n    padding-top: 20px;\\n\"])), colorMainColumn.string());\nvar ZapiszSie = function () {\n    return (React.createElement(Utils_1.Row, null,\n        React.createElement(\"div\", null, \"Zapisz si\\u0119 ...\")));\n};\nvar Ankieta = function () {\n    return (React.createElement(Utils_1.Row, null,\n        React.createElement(\"div\", null, \"Ankieta ...\")));\n};\nvar Aktualnosci = function () {\n    return (React.createElement(Utils_1.Row, null,\n        React.createElement(\"div\", null, \"Aktualnosci ...\")));\n};\nvar App = /** @class */ (function (_super) {\n    __extends(App, _super);\n    function App() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    App.prototype.render = function () {\n        return (React.createElement(react_router_dom_1.HashRouter, null,\n            React.createElement(Background, null,\n                React.createElement(Header_1.Header, null),\n                React.createElement(Wrapper, null,\n                    React.createElement(Utils_1.Row, null,\n                        React.createElement(Menu_1.Menu, null)),\n                    React.createElement(react_router_dom_1.Switch, null,\n                        React.createElement(react_router_1.Route, { path: \"/\", exact: true, component: Home_1.Home }),\n                        React.createElement(react_router_1.Route, { path: '/zapisz-sie', component: ZapiszSie }),\n                        React.createElement(react_router_1.Route, { path: '/ankieta', component: Ankieta }),\n                        React.createElement(react_router_1.Route, { path: '/aktualnosci', component: Aktualnosci }))))));\n    };\n    return App;\n}(React.PureComponent));\nexports.App = App;\nvar templateObject_1, templateObject_2;\n\n\n//# sourceURL=webpack:///./src/App/App.tsx?");
 
 /***/ }),
 
@@ -1115,7 +1115,150 @@ eval("\nvar __makeTemplateObject = (this && this.__makeTemplateObject) || functi
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar Header = /** @class */ (function (_super) {\n    __extends(Header, _super);\n    function Header() {\n        return _super !== null && _super.apply(this, arguments) || this;\n    }\n    Header.prototype.render = function () {\n        return (React.createElement(\"div\", null, \"Nag\\u0142\\u00F3wek\"));\n    };\n    return Header;\n}(React.PureComponent));\nexports.Header = Header;\n\n\n//# sourceURL=webpack:///./src/App/Header/Header.tsx?");
+eval("\nvar __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {\n    if (Object.defineProperty) { Object.defineProperty(cooked, \"raw\", { value: raw }); } else { cooked.raw = raw; }\n    return cooked;\n};\nvar __extends = (this && this.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    }\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar React = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\nvar react_emotion_1 = __webpack_require__(/*! react-emotion */ \"./node_modules/react-emotion/dist/index.esm.js\");\nvar photo01 = __webpack_require__(/*! ./fotodonagwka/N1adrenaline.jpg */ \"./src/App/Header/fotodonagwka/N1adrenaline.jpg\");\nvar photo02 = __webpack_require__(/*! ./fotodonagwka/N2civ_box_3d.jpg */ \"./src/App/Header/fotodonagwka/N2civ_box_3d.jpg\");\nvar photo03 = __webpack_require__(/*! ./fotodonagwka/N3hs_hex_duel.jpg */ \"./src/App/Header/fotodonagwka/N3hs_hex_duel.jpg\");\nvar photo04 = __webpack_require__(/*! ./fotodonagwka/N4k2 blisko.jpg */ \"./src/App/Header/fotodonagwka/N4k2 blisko.jpg\");\nvar photo05 = __webpack_require__(/*! ./fotodonagwka/N6-1163742_1920.jpg */ \"./src/App/Header/fotodonagwka/N6-1163742_1920.jpg\");\nvar photo06 = __webpack_require__(/*! ./fotodonagwka/N7domek_box3d.jpg */ \"./src/App/Header/fotodonagwka/N7domek_box3d.jpg\");\nvar photo07 = __webpack_require__(/*! ./fotodonagwka/Nk_3d.365162.800x0.jpg */ \"./src/App/Header/fotodonagwka/Nk_3d.365162.800x0.jpg\");\nvar photo08 = __webpack_require__(/*! ./fotodonagwka/Noll f g.jpg */ \"./src/App/Header/fotodonagwka/Noll f g.jpg\");\nvar photo09 = __webpack_require__(/*! ./fotodonagwka/NSpace Alert.jpg */ \"./src/App/Header/fotodonagwka/NSpace Alert.jpg\");\nvar photo10 = __webpack_require__(/*! ./fotodonagwka/NSpace-Alert.jpg */ \"./src/App/Header/fotodonagwka/NSpace-Alert.jpg\");\nvar photo11 = __webpack_require__(/*! ./fotodonagwka/NSplendor-001-large.jpg */ \"./src/App/Header/fotodonagwka/NSplendor-001-large.jpg\");\nvar photo12 = __webpack_require__(/*! ./fotodonagwka/Nterra.jpg */ \"./src/App/Header/fotodonagwka/Nterra.jpg\");\nvar photo13 = __webpack_require__(/*! ./fotodonagwka/Nythe-ilustracja-1.jpg */ \"./src/App/Header/fotodonagwka/Nythe-ilustracja-1.jpg\");\nvar photos = [\n    photo01, photo02, photo03, photo04, photo05,\n    photo06, photo07, photo08, photo09, photo10,\n    photo11, photo12, photo13\n];\nvar Wrapper = react_emotion_1.default('div')(templateObject_1 || (templateObject_1 = __makeTemplateObject([\"\\n    width: 100%;\\n    height: 300px;\\n    position: relative;\\n\"], [\"\\n    width: 100%;\\n    height: 300px;\\n    position: relative;\\n\"])));\nvar ImageHeader = react_emotion_1.default('div')(templateObject_2 || (templateObject_2 = __makeTemplateObject([\"\\n    position: absolute;\\n    top: 0;\\n    right: 0;\\n    bottom: 0;\\n    left: 0;\\n    opacity: \", \";\\n    transition: opacity 2s;\\n    background-image: url(\\\"\", \"\\\");\\n    background-size: cover;\\n    background-position: center;\\n\"], [\"\\n    position: absolute;\\n    top: 0;\\n    right: 0;\\n    bottom: 0;\\n    left: 0;\\n    opacity: \", \";\\n    transition: opacity 2s;\\n    background-image: url(\\\"\", \"\\\");\\n    background-size: cover;\\n    background-position: center;\\n\"])), function (props) { return props.show ? '1' : '0'; }, function (props) { return props.src; });\nvar Header = /** @class */ (function (_super) {\n    __extends(Header, _super);\n    function Header(props) {\n        var _this = _super.call(this, props) || this;\n        _this.renderItem = function (src, index) {\n            var show = _this.state.current === index;\n            return (React.createElement(ImageHeader, { key: index, src: src, show: show }));\n        };\n        _this.state = {\n            current: 0\n        };\n        setInterval(function () {\n            var newCurrent = _this.state.current + 1;\n            if (newCurrent > photos.length - 1) {\n                _this.setState({\n                    current: 0\n                });\n            }\n            else {\n                _this.setState({\n                    current: newCurrent\n                });\n            }\n        }, 7000);\n        return _this;\n    }\n    Header.prototype.render = function () {\n        return (React.createElement(Wrapper, null, photos.map(this.renderItem)));\n    };\n    return Header;\n}(React.PureComponent));\nexports.Header = Header;\nvar templateObject_1, templateObject_2;\n\n\n//# sourceURL=webpack:///./src/App/Header/Header.tsx?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/N1adrenaline.jpg":
+/*!******************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/N1adrenaline.jpg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"391fb2908ea4a94c85957ebd6f039c8b.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/N1adrenaline.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/N2civ_box_3d.jpg":
+/*!******************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/N2civ_box_3d.jpg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"6c01fc40f05fe76cbc8cee6b2d83b538.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/N2civ_box_3d.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/N3hs_hex_duel.jpg":
+/*!*******************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/N3hs_hex_duel.jpg ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"8bf73e33e59025019d7e9e00bba79f94.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/N3hs_hex_duel.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/N4k2 blisko.jpg":
+/*!*****************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/N4k2 blisko.jpg ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"345baf29e76bdfb48ab6f042f6cd2b48.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/N4k2_blisko.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/N6-1163742_1920.jpg":
+/*!*********************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/N6-1163742_1920.jpg ***!
+  \*********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"c04bcc04e0e6f36a841383e6545721e1.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/N6-1163742_1920.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/N7domek_box3d.jpg":
+/*!*******************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/N7domek_box3d.jpg ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"24a02753bec7f53085efe04bce348e50.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/N7domek_box3d.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/NSpace Alert.jpg":
+/*!******************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/NSpace Alert.jpg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"5ffab9d6b0626d82080583ee595b1a58.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/NSpace_Alert.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/NSpace-Alert.jpg":
+/*!******************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/NSpace-Alert.jpg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"4f6be53831c8ec5b2ef4f027a46bf2ed.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/NSpace-Alert.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/NSplendor-001-large.jpg":
+/*!*************************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/NSplendor-001-large.jpg ***!
+  \*************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"ca2f5e70edb3d4f30c0dbc35add67935.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/NSplendor-001-large.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/Nk_3d.365162.800x0.jpg":
+/*!************************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/Nk_3d.365162.800x0.jpg ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"73427310b42a17f90e962c35b10f0142.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/Nk_3d.365162.800x0.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/Noll f g.jpg":
+/*!**************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/Noll f g.jpg ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"43c1a1095f0047bfe9765011dbbe083e.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/Noll_f_g.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/Nterra.jpg":
+/*!************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/Nterra.jpg ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"b4da8130d80d69a92559814ae2f631fe.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/Nterra.jpg?");
+
+/***/ }),
+
+/***/ "./src/App/Header/fotodonagwka/Nythe-ilustracja-1.jpg":
+/*!************************************************************!*\
+  !*** ./src/App/Header/fotodonagwka/Nythe-ilustracja-1.jpg ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"23ad97b28cc9736de39bfdebf95322b2.jpg\";\n\n//# sourceURL=webpack:///./src/App/Header/fotodonagwka/Nythe-ilustracja-1.jpg?");
 
 /***/ }),
 

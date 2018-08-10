@@ -23,6 +23,7 @@ const Wrapper = styled('div')`
     margin: 0 auto;
     background-color: ${colorMainColumn.string()};
     min-height: 100vh;
+    padding-top: 20px;
 `;
 
 interface PropsType {
@@ -58,10 +59,8 @@ export class App extends React.PureComponent<PropsType> {
         return (
             <HashRouter>
                 <Background>
+                    <Header />
                     <Wrapper>
-                        <Row>
-                            <Header />
-                        </Row>
                         <Row>
                             <Menu />
                         </Row>
