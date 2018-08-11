@@ -1,4 +1,5 @@
 import { injectGlobal } from 'react-emotion';
+import { Theme } from './Theme';
 
 injectGlobal `
 html,
@@ -34,4 +35,9 @@ a:focus {
   color: currentColor;
   text-decoration: none;
 }
+
+* {
+  color: ${Theme.color};
+}
+
 `;

@@ -8,10 +8,10 @@ import { Switch, HashRouter } from 'react-router-dom';
 import { Row } from './Utils';
 import { Home } from './Page/Home/Home';
 import { Header } from './Header/Header';
+import { Theme } from './Theme';
+import { Header as HeaderText } from './Page/Common';
 
-//const react_logo = require('./react-icon.svg');
-
-const colorBackground = '#ffd536';
+const colorBackground = Theme.background;
 var colorMainColumn = Color(colorBackground).lighten(0.5);
 
 const Background = styled('div')`
@@ -62,9 +62,11 @@ export class App extends React.PureComponent<PropsType> {
                     <Header />
                     <Wrapper>
                         <Row>
+                            <HeaderText>SUPER PLANSZA Spotkania przy nowoczesnych grach planszowych</HeaderText>
+                        </Row>
+                        <Row>
                             <Menu />
                         </Row>
-
                         <Switch>
                             <Route path="/" exact component={Home} />
                             <Route path='/zapisz-sie' component={ZapiszSie} />
