@@ -1,7 +1,7 @@
 import * as React from 'react';
-import styled from 'react-emotion';
+import styled, { css } from 'react-emotion';
 import * as Color from 'color';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const menuColor = '#e0e0e0';
 const menuColorHover = Color(menuColor).alpha(.5).string();
@@ -25,14 +25,18 @@ const Item = styled('span')`
     }
 `;
 
+const activeClassName = css`
+    color: red;
+`;
+
 export class Menu extends React.PureComponent {
     render() {
         return (
             <Wrapper>
-                <Link to="/"><Item>Strona główna</Item></Link>
-                <Link to="/zapisz-sie"><Item>Zapisz się!</Item></Link>
-                <Link to="/ankieta"><Item>Ankieta</Item></Link>
-                <Link to="/aktualnosci"><Item>Aktualności</Item></Link>
+                <NavLink activeClassName={activeClassName} to="/"><Item>Strona główna</Item></NavLink>
+                <NavLink activeClassName={activeClassName} to="/zapisz-sie"><Item>Zapisz się!</Item></NavLink>
+                <NavLink activeClassName={activeClassName} to="/ankieta"><Item>Ankieta</Item></NavLink>
+                <NavLink activeClassName={activeClassName} to="/aktualnosci"><Item>Aktualności</Item></NavLink>
             </Wrapper>
         );
     }
