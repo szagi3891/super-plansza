@@ -58,17 +58,15 @@ export class Header extends React.PureComponent<{}, StateType> {
         };
 
         setInterval(() => {
-            const newCurrent = this.state.current + 1;
-            if (newCurrent > photos.length - 1) {
-                this.setState({
-                    current: 0
-                });
-            } else {
-                this.setState({
-                    current: newCurrent
-                });
-            }
+            this.setState({
+                current: this.offsetIndex(1)
+            });
         }, 7000);
+    }
+
+    private offsetIndex(offset: number): number {
+        const newOffset = (this.state.current + offset) % photos.length;
+        return newOffset < 0 ? newOffset + photos.length : newOffset;
     }
 
     render() {
@@ -80,10 +78,18 @@ export class Header extends React.PureComponent<{}, StateType> {
     }
 
     renderItem = (src: string, index: number) => {
-        const show = this.state.current === index;
+        const { current } = this.state;
 
-        return (
-            <ImageHeader key={index} src={src} show={show} />
-        );
+        if (index === this.offsetIndex(-1) || index === current || index === this.offsetIndex(1)) {
+            return (
+                <ImageHeader
+                    key={index}
+                    src={src}
+                    show={current === index}
+                />
+            );
+        }
+
+        return null;
     }
 }

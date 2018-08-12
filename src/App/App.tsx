@@ -10,6 +10,7 @@ import { Home } from './Page/Home/Home';
 import { Header } from './Header/Header';
 import { Theme } from './Theme';
 import { Header as HeaderText } from './Page/Common';
+import { News } from './Page/News/News';
 
 const colorBackground = Theme.background;
 var colorMainColumn = Color(colorBackground).lighten(0.5);
@@ -26,52 +27,35 @@ const Wrapper = styled('div')`
     padding-top: 20px;
 `;
 
-interface PropsType {
-    label: string,
-}
+const HeaderBox = styled('div')`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+`;
 
-const ZapiszSie = () => {
-    return (
-        <Row>
-            <div>Zapisz się ...</div>
-        </Row>
-    );
-};
-
-const Ankieta = () => {
-    return (
-        <Row>
-            <div>Ankieta ...</div>
-        </Row>
-    );
-};
-
-const Aktualnosci = () => {
-    return (
-        <Row>
-            <div>Aktualnosci ...</div>
-        </Row>
-    );
-};
-
-export class App extends React.PureComponent<PropsType> {
+export class App extends React.PureComponent {
     render() {
         return (
             <HashRouter>
                 <Background>
                     <Header />
                     <Wrapper>
-                        <Row>
-                            <HeaderText>SUPER PLANSZA Spotkania przy nowoczesnych grach planszowych</HeaderText>
-                        </Row>
+                        <HeaderBox>
+                            <HeaderText role="main">"SUPER PLANSZA"</HeaderText>
+                            <HeaderText role="subtitle">Spotkania przy nowoczesnych grach planszowych</HeaderText>
+                        </HeaderBox>
+
                         <Row>
                             <Menu />
                         </Row>
+
                         <Switch>
                             <Route path="/" exact component={Home} />
-                            <Route path='/zapisz-sie' component={ZapiszSie} />
-                            <Route path='/ankieta' component={Ankieta} />
-                            <Route path='/aktualnosci' component={Aktualnosci} />
+                            <Route path='/aktualnosci' component={News} />
                         </Switch>
 
                     </Wrapper>

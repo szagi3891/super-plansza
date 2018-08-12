@@ -5,6 +5,6 @@ import { App } from './App/App';
 const root = document.getElementById('root');
 
 if (root) {
-    ReactDOM.render(<App label="dd" />, root);
+    ReactDOM.render(<App />, root);
 }
 

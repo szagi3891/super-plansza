@@ -33,10 +33,12 @@ export class Menu extends React.PureComponent {
     render() {
         return (
             <Wrapper>
-                <NavLink activeClassName={activeClassName} to="/"><Item>Strona główna</Item></NavLink>
-                <NavLink activeClassName={activeClassName} to="/zapisz-sie"><Item>Zapisz się!</Item></NavLink>
-                <NavLink activeClassName={activeClassName} to="/ankieta"><Item>Ankieta</Item></NavLink>
-                <NavLink activeClassName={activeClassName} to="/aktualnosci"><Item>Aktualności</Item></NavLink>
+                <NavLink activeClassName={activeClassName} to="/">
+                    <Item>Strona główna</Item>
+                </NavLink>
+                <NavLink activeClassName={activeClassName} to="/aktualnosci">
+                    <Item>Aktualności</Item>
+                </NavLink>
             </Wrapper>
         );
     }
