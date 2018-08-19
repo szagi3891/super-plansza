@@ -1,0 +1,99 @@
+https://www.telerik.com/blogs/dockerizing-react-applications-for-continuous-integration
+Aplikacja w react wsadzana do dokera ...
+
+
+docker run --cap-add=NET_ADMIN -it --name=naszanazwa -v /nasz/katalog:/var/www/html ubuntu:14.04  /bin/sh -c "/sbin/ip addr add 172.17.0.88 dev eth0;  bash"
+
+
+    naszanazwa - nazwa kontenera, którą sobie sami ustalamy
+    /nasz/katalog - pełna ścieżka do katalogu na naszym głównym systemie. W tym katalogu będą pliki naszego projektu
+    /var/www/html - ścieżka do katalogu w systemie kontenera. Pod tą ścięzkę zostaną zmapowane dane z naszego katalogu i wszystkie zmiany jakie zrobimy u nas, będą od razu widoczne w kontenerze
+    ubuntu:14.04 - nazwa obrazu, na podstawie którego zostanie utworzony kontener. Obrazy dostępne są w publicznym repozytorium dockera.
+    172.17.0.88 - IP naszego kontenera, pod jakim chcemy mieć dostęp do kontenera. Należy pamiętać by wybrać takie IP, które nie jest aktualnie zajęte i nie bedzię zajęte w przyszłości
+
+docker run --cap-add=NET_ADMIN -it --name=pierwszykontener -v /home/oem/Desktop/docker:/var/www/html ubuntu:14.04  /bin/sh -c "/sbin/ip addr add 172.17.0.88 dev eth0;  bash"
+
+docker run --cap-add=NET_ADMIN -it --name=pierwszykontener -v /home/oem/Desktop/docker:/var/www/html node:10  /bin/sh -c "/sbin/ip addr add 172.17.0.88 dev eth0;  bash"
+
+
+        pokazuje wszystkie kontenery:
+docker ps -a
+
+        ponowne uruchomienie kontenera (ID lub nazwa):
+docker start naszanazwa 
+
+        zatrzymanie kontenera
+docker stop naszanazwa
+
+        usunięcie kontenera
+docker rm pierwszykontener
+
+        podpięcie się pod kontener
+docker attach naszanazwa 
+
+
+docker run -d -v ~/docker:/shared_volume -p 8000:8000 python:3.5-slim /bin/bash -c "cd /shared_volume && python -m http.server 8000"
+
+
+-it  --- od razu wchodzimy konsolą w ten kontener
+-d   --- uruchamia kontener jako demona w tle
+
+
+Wszystkie  obrazy  są  dostępne w namespace   zbudowanym  wg. zasady:
+- repozytorium/nazwa:tag
+- w praktyce: autor/aplikacja:wersja
+
+
+docker logs nazwaKontenera
+    pokazuje logi danego kontenera
+
+
+docker  commit
+- Zapisuje zmiany wprowadzone w kontenerze jako nowy obraz
+- Składnia: 'docker commit [opcje] [ID kontenera] [obraz w repo]'
+- Nazwa obrazu w repozytorium: autor/aplikacja:wersja
+- W 'docker commit' można użyć nazwy kontenera zamiast ID
+
+
+Dockerfile CMD
+- CMD definiuje domyślną komendę jaka będzie wykonana po  utworzeniu kontenera
+- CMD nie jest wykonywane w procesie budowania obrazu
+- Dwa możliwe formaty: 
+- Shell (string) - np. '/usr/bin/my_server'
+- Exec (tablica) - np. [“/bin/ping”, “127.0.0.1”, “-c”, “50”]
+- Może pojawić się tylko raz w Dockerfile
+- Może być zmienione w czasie uruchamiania kontenera
+- 'docker run [obraz] [komenda]'
+
+
+
+Przykładowe budowanie obrazu pingującego
+
+> cat Dockerfile
+FROM ubuntu:14.04
+CMD ["ping", "127.0.0.1", "-c", "5"]
+> docker build -t eevee/pinger:1.0
+... budowanie ...
+> docker run eevee/pinger:1.0
+
+
+wypychanie obrazu
+docker push [repozytorium/nazwa:tag]
+
+sudo docker images                      - wyświetla listę obrazów w systemie
+
+docker build --rm -f Dockerfile -t szagi3891/superplansza:0.1 .
+
+docker run -d -p 8080:8080 example/docker-node-hello:latest
+
+
+docker run -d -p 8080:8080 szagi3891/superplansza:0.1
+
+docker push szagi3891/superplansza:0.1                          - wypchnięcie obrazu do rejestru
+docker login                                                    - zalogowanie się do rejestru na lokalnej maszynie
+
+docker pull mysql                                               - pobranie jakiegoś obrazu
+
+wyszukiwanie obrazu
+docker search drupal
+
