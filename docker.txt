@@ -97,3 +97,5 @@ docker pull mysql                                               - pobranie jakie
 wyszukiwanie obrazu
 docker search drupal
 
+        pokazuje jakich zmian dokonano w kontenerze
+docker diff dzialajacy_drupal
