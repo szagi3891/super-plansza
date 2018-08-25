@@ -72,19 +72,18 @@ export const Home = () => {
 
                 <GridCell>
                     <Title>W co gramy?:</Title>
-                    <div>Tylko nowoczesne i najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach i festiwalach na całym świecie.</div>
-                    <div>Na przykład będą to: Carrcassonne, Splendor, Królestwo w budowie, wiele innych w tym gry kooperacyjne, Wsiąść do pociągu, Sabotażysta, K2, Kolejka, Neuroshima Hex, Timeline i wiele.</div>
+                    <div>Najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach i festiwalach na całym świecie.</div>
+                    <div>Na przykład: Carrcassonne, Splendor, Królestwo w budowie, Wsiąść do pociągu, Sabotażysta, K2, Kolejka, Neuroshima Hex, Timeline oraz wiele innych.</div>
                 </GridCell>
 
                 <GridCell>
-                    <Title>Format zajęć:</Title>
+                    <Title>Forma zajęć:</Title>
                     <div>Jak wyglądają zajęcia:</div>
                     <Ul>
                         <li>trwają 2 godziny</li>
-                        <li>zasiadamy do ławek</li>
                         <li>tłumaczone są zasady gry</li>
-                        <li>gramy tylko i wyłącznie w najlepsze gry,</li> 
-                        <li>w drugiej części zajęć chętni grają turniej , pozostali grają w ulubione gry</li>
+                        <li>gramy tylko i wyłącznie w najlepsze gry,</li>
+                        <li>w drugiej części zajęć chętni grają turniej a pozostali w ulubione gry</li>
                     </Ul>
                 </GridCell>
 

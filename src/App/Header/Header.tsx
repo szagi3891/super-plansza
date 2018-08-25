@@ -14,11 +14,15 @@ const photo10 = require('./fotodonagwka/NSpace-Alert.jpg');
 const photo11 = require('./fotodonagwka/NSplendor-001-large.jpg');
 const photo12 = require('./fotodonagwka/Nterra.jpg');
 const photo13 = require('./fotodonagwka/Nythe-ilustracja-1.jpg');
+const photo14 = require('./fotodonagwka/7DU_age2_PL.png');
+const photo15 = require('./fotodonagwka/Npojedynek_3d.jpg');
+const photo16 = require('./fotodonagwka/NUranopolis.jpg');
 
 const photos = [
     photo01, photo02, photo03, photo04, photo05,
     photo06, photo07, photo08, photo09, photo10,
-    photo11, photo12, photo13
+    photo11, photo12, photo13,
+    photo14, photo15, photo16
 ];
 
 interface ImageHeaderPropsType {
