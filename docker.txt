@@ -99,3 +99,7 @@ docker search drupal
 
         pokazuje jakich zmian dokonano w kontenerze
 docker diff dzialajacy_drupal
+
+
+odpalanie rethinkdb:
+        docker run --name some-rethink -v "$PWD:/data" -d rethinkdb
