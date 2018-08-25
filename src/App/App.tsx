@@ -11,6 +11,7 @@ import { Header } from './Header/Header';
 import { Theme } from './Theme';
 import { Header as HeaderText } from './Page/Common';
 import { News } from './Page/News/News';
+import { Contact } from './Page/Contact/Contact';
 
 const colorBackground = Theme.background;
 var colorMainColumn = Color(colorBackground).lighten(0.5);
@@ -55,7 +56,10 @@ export class App extends React.PureComponent {
 
                         <Switch>
                             <Route path="/" exact component={Home} />
-                            <Route path='/aktualnosci' component={News} />
+                            <Route path='/aktualnosci' component={() => (
+                                <News mainView={false} />
+                            )} />
+                            <Route path="/kontakt" component={Contact} />
                         </Switch>
 
                     </Wrapper>

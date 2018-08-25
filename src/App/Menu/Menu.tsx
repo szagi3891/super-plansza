@@ -39,6 +39,9 @@ export class Menu extends React.PureComponent {
                 <NavLink activeClassName={activeClassName} to="/aktualnosci">
                     <Item>Aktualności</Item>
                 </NavLink>
+                <NavLink activeClassName={activeClassName} to="/kontakt">
+                    <Item>Kontakt</Item>
+                </NavLink>
             </Wrapper>
         );
     }

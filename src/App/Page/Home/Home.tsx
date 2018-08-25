@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'react-emotion';
+import { News } from '../News/News';
 //const img1 = require('./home/1-image2.jpg');
 const img2 = require('./home/2-image3.jpg');
 const img3 = require('./home/3-image4.jpg');
@@ -51,9 +52,7 @@ const Title = styled('h3')`
 export const Home = () => {
     return (
         <React.Fragment>
-            { /*
-            <MessageImg src={img1} />
-            */ }
+            <News mainView={true} />
 
             <Grid>
                 <GridImage src={img2} />
