@@ -16,10 +16,11 @@ export const Header = styled('h2')<HeaderPropsType>`
 
 interface MessageImgPropsType {
     src: string,
+    setMinHeight: boolean,
 }
 
 export const GridImage = styled('div')<MessageImgPropsType>`
-    min-height: 300px;
+    ${ props => props.setMinHeight ? 'min-height: 300px;' : ''}
     background-image: url("${props => props.src}");
     background-size: cover;
     background-position: center;

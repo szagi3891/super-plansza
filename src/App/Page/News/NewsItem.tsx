@@ -31,7 +31,7 @@ export class NewsItem extends React.PureComponent<PropsType> {
                     <GridRowShort>
                         { this.leftColumn() }
                     </GridRowShort>
-                    <GridImage src={firstPhoto} />
+                    <GridImage src={firstPhoto} setMinHeight={false} />
                 </React.Fragment>
             );
         }

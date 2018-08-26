@@ -24,7 +24,7 @@ export const Home = () => {
         <React.Fragment>
             <News mainView={true} />
 
-            <GridImage src={img2} />
+            <GridImage src={img2} setMinHeight={true} />
 
             <GridCell>
                 <Title>Co robimy?:</Title>
@@ -77,7 +77,7 @@ export const Home = () => {
                 </Content>
             </GridCell>
 
-            <GridImage src={img3} />
+            <GridImage src={img3} setMinHeight={true} />
 
         </React.Fragment>
     );
