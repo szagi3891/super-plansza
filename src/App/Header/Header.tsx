@@ -2,12 +2,12 @@ import * as React from 'react';
 import styled from 'react-emotion';
 
 const photo01 = require('./fotodonagwka/N1adrenaline.jpg');
-const photo02 = require('./fotodonagwka/N2civ_box_3d.jpg');
-const photo03 = require('./fotodonagwka/N3hs_hex_duel.jpg');
+//const photo02 = require('./fotodonagwka/N2civ_box_3d.jpg');
+//const photo03 = require('./fotodonagwka/N3hs_hex_duel.jpg');
 const photo04 = require('./fotodonagwka/N4k2 blisko.jpg');
 const photo05 = require('./fotodonagwka/N6-1163742_1920.jpg');
 const photo06 = require('./fotodonagwka/N7domek_box3d.jpg');
-const photo07 = require('./fotodonagwka/Nk_3d.365162.800x0.jpg');
+//const photo07 = require('./fotodonagwka/Nk_3d.365162.800x0.jpg');
 const photo08 = require('./fotodonagwka/Noll f g.jpg');
 const photo09 = require('./fotodonagwka/NSpace Alert.jpg');
 const photo10 = require('./fotodonagwka/NSpace-Alert.jpg');
@@ -19,8 +19,8 @@ const photo15 = require('./fotodonagwka/Npojedynek_3d.jpg');
 const photo16 = require('./fotodonagwka/NUranopolis.jpg');
 
 const photos = [
-    photo01, photo02, photo03, photo04, photo05,
-    photo06, photo07, photo08, photo09, photo10,
+    photo01, photo04, photo05,
+    photo06, photo08, photo09, photo10,
     photo11, photo12, photo13,
     photo14, photo15, photo16
 ];

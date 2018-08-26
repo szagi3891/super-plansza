@@ -5,6 +5,10 @@ import { NewsItem, NewsItemType } from './NewsItem';
 
 const news1 = require('./news1.png');
 
+const Wrapper = styled('div')`
+    padding: 0 10;
+`;
+
 const data: Array<NewsItemType> = [{
     title: 'Zajęcia na start WSTĘP WOLNY!',
     content: `
@@ -30,7 +34,6 @@ const data: Array<NewsItemType> = [{
 
 const LinkInner = styled('span')`
     display: block;
-    margin-top: 20px;
     color: blue;
 `;
 
@@ -41,10 +44,10 @@ interface PropsType {
 export class News extends React.PureComponent<PropsType> {
     render() {
         return (
-            <React.Fragment>
+            <Wrapper>
                 { this.renderList() }
                 { this.renderLink() }
-            </React.Fragment>
+            </Wrapper>
         );
     }
 
