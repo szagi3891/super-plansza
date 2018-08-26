@@ -3,7 +3,7 @@ import styled from 'react-emotion';
 import { Link } from 'react-router-dom';
 import { NewsItem, NewsItemType } from './NewsItem';
 
-const news1 = require('./news1.png');
+const news1 = require('./SP logo 5.jpg');
 
 const Wrapper = styled('div')`
     padding: 0 10;
