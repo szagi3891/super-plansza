@@ -1,7 +1,9 @@
 import * as React from 'react';
-import styled, { css } from 'react-emotion';
+import styled from 'react-emotion';
 import * as Color from 'color';
-import { NavLink } from 'react-router-dom';
+import { AppState, PageType } from 'AppState/AppState';
+import { observer } from 'mobx-react';
+import { action } from 'mobx';
 
 const menuColor = '#e0e0e0';
 const menuColorHover = Color(menuColor).alpha(.5).string();
@@ -11,7 +13,11 @@ const Wrapper = styled('div')`
     flex-direction: row;
 `;
 
-const Item = styled('span')`
+interface ItemPropsType {
+    isSelect: boolean,
+}
+
+const Item = styled('span')<ItemPropsType>`
     border: 1px solid black;
     padding: 5px;
     margin-right: 10px;
@@ -23,27 +29,51 @@ const Item = styled('span')`
         background-color: ${menuColorHover};
         color: red;
     }
+    ${props => props.isSelect ? `
+        background-color: ${menuColorHover};
+        color: red;
+` : ''}
 `;
 
-const activeClassName = css`
-    color: red;
-`;
+interface MenuItemPropsType {
+    appState: AppState
+    page: PageType,
+    children: React.ReactNode,
+}
 
-export class Menu extends React.PureComponent {
+@observer
+class MenuItem extends React.Component<MenuItemPropsType> {
     render() {
+        const { appState, page, children } = this.props;
+
+        const isSelect = appState.page === page;
+
+        return (
+            <Item isSelect={isSelect} onClick={this.onClick}>{ children }</Item>
+        );
+    }
+    @action private onClick = () => {
+        const { appState, page } = this.props;
+        appState.setPage(page);
+    }
+}
+
+interface MenuPropsType {
+    appState: AppState
+}
+
+export class Menu extends React.Component<MenuPropsType> {
+    render() {
+        const { appState } = this.props;
+
         return (
             <Wrapper>
-                <NavLink activeClassName={activeClassName} to="/">
-                    <Item>Strona główna</Item>
-                </NavLink>
-                <NavLink activeClassName={activeClassName} to="/aktualnosci">
-                    <Item>Aktualności</Item>
-                </NavLink>
-                <NavLink activeClassName={activeClassName} to="/kontakt">
-                    <Item>Kontakt</Item>
-                </NavLink>
+                <MenuItem appState={appState} page="home">Strona główna</MenuItem>
+                <MenuItem appState={appState} page="news">Aktualności</MenuItem>
+                <MenuItem appState={appState} page="contact">Kontakt</MenuItem>
             </Wrapper>
         );
     }
+
 }
 

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { Link } from 'react-router-dom';
 import { NewsItem, NewsItemType } from './NewsItem';
 import { GridRowFull } from '../Common';
+import { AppState } from 'AppState/AppState';
 
 const data: Array<NewsItemType> = [{
     title: 'Zajęcia na start WSTĘP WOLNY!',
@@ -31,6 +31,7 @@ const LinkInner = styled('span')`
 
 interface PropsType {
     mainView: boolean,
+    appState: AppState,
 }
 
 export class News extends React.PureComponent<PropsType> {
@@ -56,12 +57,14 @@ export class News extends React.PureComponent<PropsType> {
     private renderLink() {
         return (
             <GridRowFull>
-                <Link to="/aktualnosci">
-                    <LinkInner>Więcej wiadomości</LinkInner>
-                </Link>
+                <LinkInner onClick={this.onClick}>Więcej wiadomości</LinkInner>
 
                 <hr/>
             </GridRowFull>
         );
+    }
+
+    private onClick = () => {
+        this.props.appState.setPage('news');
     }
 }

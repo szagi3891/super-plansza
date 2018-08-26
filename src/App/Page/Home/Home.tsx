@@ -2,6 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import { News } from '../News/News';
 import { GridImage, GridCell } from '../Common';
+import { AppState } from 'AppState/AppState';
 //const img1 = require('./home/1-image2.jpg');
 const img2 = require('./home/2-image3.jpg');
 const img3 = require('./home/3-image4.jpg');
@@ -19,10 +20,14 @@ const Content = styled('div')`
     line-height: 24px;
 `;
 
-export const Home = () => {
+interface HomePropsType {
+    appState: AppState,
+}
+
+export const Home = (props: HomePropsType) => {
     return (
         <React.Fragment>
-            <News mainView={true} />
+            <News mainView={true} appState={props.appState} />
 
             <GridImage src={img2} setMinHeight={true} />
 
