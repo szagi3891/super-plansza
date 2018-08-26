@@ -2,12 +2,7 @@ import * as React from 'react';
 import styled from 'react-emotion';
 import { Link } from 'react-router-dom';
 import { NewsItem, NewsItemType } from './NewsItem';
-
-const news1 = require('./SP logo 5.jpg');
-
-const Wrapper = styled('div')`
-    padding: 0 10;
-`;
+import { GridRowFull } from '../Common';
 
 const data: Array<NewsItemType> = [{
     title: 'Zajęcia na start WSTĘP WOLNY!',
@@ -18,18 +13,15 @@ const data: Array<NewsItemType> = [{
         Zapraszam młodzież i dzieci w wieku od lat 8 na 120 minut dobrej
         zabawy w piątek 12 i 26.10.2018r.
     `,
-    date: '2018-08-12',
-    img: news1,
+    date: '2018-08-12'
 },{
     title: 'Wiadomosć nr 2 (starsza)',
     content: `Z przyjemnością informuję, że pierwsze i drugie zajęcia z grami planszowymi , które odbędą się w II LO w Chrzanowie w miesiącu październiku`,
     date: '2018-08-02',
-    img: null,
 },{
     title: 'Wiadomosć nr 3 (starsza)',
     content: `Z przyjemnością informuję, że pierwsze i drugie zajęcia z grami planszowymi , które odbędą się w II LO w Chrzanowie w miesiącu październiku`,
     date: '2018-06-22',
-    img: null,
 }];
 
 const LinkInner = styled('span')`
@@ -44,10 +36,10 @@ interface PropsType {
 export class News extends React.PureComponent<PropsType> {
     render() {
         return (
-            <Wrapper>
+            <React.Fragment>
                 { this.renderList() }
                 { this.renderLink() }
-            </Wrapper>
+            </React.Fragment>
         );
     }
 
@@ -59,10 +51,10 @@ export class News extends React.PureComponent<PropsType> {
         }
 
         if (mainView) {
-            return <NewsItem data={data[0]} />;
+            return <NewsItem data={data[0]} showImg={true} />;
         }
 
-        return data.map((item => <NewsItem key={item.date} data={item} />));
+        return data.map((item => <NewsItem key={item.date} data={item} showImg={false} />));
     }
 
     private renderLink() {
@@ -70,13 +62,13 @@ export class News extends React.PureComponent<PropsType> {
 
         if (mainView && data.length > 1) {
             return (
-                <React.Fragment>
+                <GridRowFull>
                     <Link to="/aktualnosci">
                         <LinkInner>Więcej wiadomości</LinkInner>
                     </Link>
 
                     <hr/>
-                </React.Fragment>
+                </GridRowFull>
             );
         }
     }

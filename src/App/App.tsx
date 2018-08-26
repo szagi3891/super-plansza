@@ -38,6 +38,15 @@ const HeaderBox = styled('div')`
     margin-bottom: 20px;
 `;
 
+const Grid = styled('div')`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+`;
+
 export class App extends React.PureComponent {
     render() {
         return (
@@ -54,13 +63,15 @@ export class App extends React.PureComponent {
                             <Menu />
                         </Row>
 
-                        <Switch>
-                            <Route path="/" exact component={Home} />
-                            <Route path='/aktualnosci' component={() => (
-                                <News mainView={false} />
-                            )} />
-                            <Route path="/kontakt" component={Contact} />
-                        </Switch>
+                        <Grid>
+                            <Switch>
+                                <Route path="/" exact component={Home} />
+                                <Route path='/aktualnosci' component={() => (
+                                    <News mainView={false} />
+                                )} />
+                                <Route path="/kontakt" component={Contact} />
+                            </Switch>
+                        </Grid>
 
                     </Wrapper>
                 </Background>

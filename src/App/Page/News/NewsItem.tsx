@@ -1,9 +1,7 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-
-const Wrapper = styled('div')`
-    margin-bottom: 20px;
-`;
+import { GridRowShort, GridCell, GridImage, GridRowFull } from '../Common';
+const news1 = require('./SP logo 5.jpg');
 
 const Title = styled('h2')`
     margin-bottom: 10px;
@@ -11,58 +9,52 @@ const Title = styled('h2')`
 
 const Content = styled('div')`
     margin-bottom: 10px;
-`
-const Logo = styled('img')`
-    margin-left: 20px;
-    margin-bottom: 20px;
-    float: right;
-`;
-
-const Clear = styled('div')`
-    clear: both;
 `;
 
 export interface NewsItemType {
     title: string,
     content: string,
     date:string,
-    img: string | null,
 }
 
 interface PropsType {
+    showImg: boolean,
     data: NewsItemType,
 }
 
 export class NewsItem extends React.PureComponent<PropsType> {
     render() {
-        return (
-            <Wrapper>
-                { this.logo() }
-                { this.leftColumn() }
-                <Clear />
-            </Wrapper>
-        );
-    }
-
-    private logo() {
-        const { title, img } = this.props.data;
-        if (img === null) {
-            return null;
+        if (this.props.showImg) {
+            return (
+                <React.Fragment>
+                    <GridRowShort>
+                        { this.leftColumn() }
+                    </GridRowShort>
+                    <GridCell>
+                        <GridImage src={news1} />
+                    </GridCell>
+                </React.Fragment>
+            );
         }
 
         return (
-            <Logo src={img} alt={title} />
+            <React.Fragment>
+                <GridRowFull>
+                    { this.leftColumn() }
+                </GridRowFull>
+            </React.Fragment>
         );
     }
+
     private leftColumn() {
         const { title, content, date } = this.props.data;
 
         return (
-            <div>
+            <React.Fragment>
                 <Title>{title}</Title>
                 <Content>{content}</Content>
                 <div>{date}</div>
-            </div>
+            </React.Fragment>
         )
     }
 }
