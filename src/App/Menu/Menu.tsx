@@ -24,6 +24,7 @@ const Item = styled('span')<ItemPropsType>`
     background-color: ${menuColor};
     cursor: pointer;
     border-radius: 2px;
+    user-select: none;
 
     &:hover {
         background-color: ${menuColorHover};
