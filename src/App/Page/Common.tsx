@@ -10,6 +10,7 @@ export const Header = styled('h2')<HeaderPropsType>`
     text-justify: center;
     ${ props => props.role === 'main' ? 'text-transform: uppercase;' : ''}
     ${ props => props.role === 'main' ? `color: ${Theme.header};` : `color: ${Theme.header_sub};` }
+    ${ props => props.role === 'main' ? 'font-size: 36px;': ''}
 `;
 
 

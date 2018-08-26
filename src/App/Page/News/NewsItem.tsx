@@ -1,14 +1,15 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { GridRowShort, GridCell, GridImage, GridRowFull } from '../Common';
-const news1 = require('./SP logo 5.jpg');
+import { GridRowShort, GridImage, GridRowFull } from '../Common';
+const firstPhoto = require('./SP logo 5.jpg');
 
 const Title = styled('h2')`
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 `;
 
 const Content = styled('div')`
-    margin-bottom: 10px;
+    line-height: 24px;
+    margin-bottom: 20px;
 `;
 
 export interface NewsItemType {
@@ -30,9 +31,7 @@ export class NewsItem extends React.PureComponent<PropsType> {
                     <GridRowShort>
                         { this.leftColumn() }
                     </GridRowShort>
-                    <GridCell>
-                        <GridImage src={news1} />
-                    </GridCell>
+                    <GridImage src={firstPhoto} />
                 </React.Fragment>
             );
         }

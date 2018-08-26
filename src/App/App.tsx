@@ -21,8 +21,9 @@ const Background = styled('div')`
 `;
 
 const Wrapper = styled('div')`
+    position: relative;
     width: 1024px;
-    margin: 0 auto;
+    margin: -150px auto 0;
     background-color: ${colorMainColumn.string()};
     min-height: 100vh;
     padding-top: 20px;

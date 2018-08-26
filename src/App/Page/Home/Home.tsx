@@ -15,6 +15,10 @@ const Title = styled('h3')`
     margin-bottom: 10px;
 `;
 
+const Content = styled('div')`
+    line-height: 24px;
+`;
+
 export const Home = () => {
     return (
         <React.Fragment>
@@ -24,45 +28,53 @@ export const Home = () => {
 
             <GridCell>
                 <Title>Co robimy?:</Title>
-                <Ul>
-                    <li>Budujemy własne królestwa</li>
-                    <li>Zdobywamy K2 zimą</li>
-                    <li>Terraformujemy Marsa</li>
-                    <li>Handlujemy kamieniami szlachetnymi</li>
-                    <li>Tworzymy własne cywilizacje</li>
-                    <li>Walczymy o życie na bezludnej wyspie</li>
-                </Ul>
+                <Content>
+                    <Ul>
+                        <li>Budujemy własne królestwa</li>
+                        <li>Zdobywamy K2 zimą</li>
+                        <li>Terraformujemy Marsa</li>
+                        <li>Handlujemy kamieniami szlachetnymi</li>
+                        <li>Tworzymy własne cywilizacje</li>
+                        <li>Walczymy o życie na bezludnej wyspie</li>
+                    </Ul>
+                </Content>
             </GridCell>
 
             <GridCell>
                 <Title>W co gramy?:</Title>
-                <div>Najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach i festiwalach na całym świecie.</div>
-                <div>Na przykład: Carrcassonne, Splendor, Królestwo w budowie, Wsiąść do pociągu, Sabotażysta, K2, Kolejka, Neuroshima Hex, Timeline oraz wiele innych.</div>
+                <Content>
+                    <div>Najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach i festiwalach na całym świecie.</div>
+                    <div>Na przykład: Carrcassonne, Splendor, Królestwo w budowie, Wsiąść do pociągu, Sabotażysta, K2, Kolejka, Neuroshima Hex, Timeline oraz wiele innych.</div>
+                </Content>
             </GridCell>
 
             <GridCell>
                 <Title>Forma zajęć:</Title>
-                <div>Jak wyglądają zajęcia:</div>
-                <Ul>
-                    <li>trwają 2 godziny</li>
-                    <li>tłumaczone są zasady gry</li>
-                    <li>gramy tylko i wyłącznie w najlepsze gry,</li>
-                    <li>w drugiej części zajęć chętni grają turniej a pozostali w ulubione gry</li>
-                </Ul>
+                <Content>
+                    <div>Jak wyglądają zajęcia:</div>
+                    <Ul>
+                        <li>trwają 2 godziny</li>
+                        <li>tłumaczone są zasady gry</li>
+                        <li>gramy tylko i wyłącznie w najlepsze gry,</li>
+                        <li>w drugiej części zajęć chętni grają turniej a pozostali w ulubione gry</li>
+                    </Ul>
+                </Content>
             </GridCell>
 
             <GridCell>
                 <Title>Planszówki to:</Title>
-                <Ul>
-                    <li>rozwój intelektualny</li>
-                    <li>nauka strategicznego myślenia</li>
-                    <li>rywalizacja</li>
-                    <li>współpraca</li>
-                    <li>odprężenie po zajęciach lekcyjnych</li>
-                    <li>alternatywa dla gier komputerowych, smartfonów</li>
-                    <li>zacieśnienie relacji z rówieśnikami</li>
-                    <li>nauka radzenia sobie z porażką</li>
-                </Ul>
+                <Content>
+                    <Ul>
+                        <li>rozwój intelektualny</li>
+                        <li>nauka strategicznego myślenia</li>
+                        <li>rywalizacja</li>
+                        <li>współpraca</li>
+                        <li>odprężenie po zajęciach lekcyjnych</li>
+                        <li>alternatywa dla gier komputerowych, smartfonów</li>
+                        <li>zacieśnienie relacji z rówieśnikami</li>
+                        <li>nauka radzenia sobie z porażką</li>
+                    </Ul>
+                </Content>
             </GridCell>
 
             <GridImage src={img3} />

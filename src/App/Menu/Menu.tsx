@@ -14,7 +14,7 @@ const Wrapper = styled('div')`
 const Item = styled('span')`
     border: 1px solid black;
     padding: 5px;
-    margin: 5px;
+    margin-right: 10px;
     background-color: ${menuColor};
     cursor: pointer;
     border-radius: 2px;

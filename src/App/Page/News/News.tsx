@@ -35,41 +35,33 @@ interface PropsType {
 
 export class News extends React.PureComponent<PropsType> {
     render() {
+        const { mainView } = this.props;
+
+        const listToShow = mainView ? data.slice(0, 2) : data;
+
         return (
             <React.Fragment>
-                { this.renderList() }
-                { this.renderLink() }
+                { this.renderList(listToShow) }
+                { mainView && data.length > 2 ? this.renderLink() : null}
             </React.Fragment>
         );
     }
 
-    private renderList() {
-        const { mainView } = this.props;
-
-        if (data.length < 1) {
-            return null;
-        }
-
-        if (mainView) {
-            return <NewsItem data={data[0]} showImg={true} />;
-        }
-
-        return data.map((item => <NewsItem key={item.date} data={item} showImg={false} />));
+    private renderList(listToShow: Array<NewsItemType>) {
+        return listToShow.map(
+            (item, index) => <NewsItem key={item.date} data={item} showImg={index === 0} />
+        );
     }
 
     private renderLink() {
-        const { mainView } = this.props;
+        return (
+            <GridRowFull>
+                <Link to="/aktualnosci">
+                    <LinkInner>Więcej wiadomości</LinkInner>
+                </Link>
 
-        if (mainView && data.length > 1) {
-            return (
-                <GridRowFull>
-                    <Link to="/aktualnosci">
-                        <LinkInner>Więcej wiadomości</LinkInner>
-                    </Link>
-
-                    <hr/>
-                </GridRowFull>
-            );
-        }
+                <hr/>
+            </GridRowFull>
+        );
     }
 }
