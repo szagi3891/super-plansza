@@ -40,3 +40,8 @@ export const GridRowShort = styled('div')`
     grid-column-start: 1;
     grid-column-end: 3;
 `;
+
+export const Content = styled('div')`
+    line-height: 24px;
+    margin-bottom: 20px;
+`;

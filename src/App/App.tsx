@@ -12,6 +12,7 @@ import { News } from './Page/News/News';
 import { Contact } from './Page/Contact/Contact';
 import { AppState } from 'AppState/AppState';
 import { observer } from 'mobx-react';
+import { Cennik } from './Page/Cennik/Cennik';
 
 const colorBackground = Theme.background;
 var colorMainColumn = Color(colorBackground).lighten(0.5);
@@ -74,6 +75,7 @@ export class App extends React.Component<PropsType> {
                     <Grid>
                         { page === 'home' ? <Home appState={appState} /> : null}
                         { page === 'news' ? <News appState={appState} mainView={false} /> : null }
+                        { page === 'cennik' ? <Cennik /> : null }
                         { page === 'contact' ? <Contact /> : null }
                     </Grid>
 

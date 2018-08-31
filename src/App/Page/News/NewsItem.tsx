@@ -1,14 +1,9 @@
 import * as React from 'react';
 import styled from 'react-emotion';
-import { GridRowShort, GridImage, GridRowFull } from '../Common';
+import { GridRowShort, GridImage, GridRowFull, Content } from '../Common';
 const firstPhoto = require('./SP logo 5.jpg');
 
 const Title = styled('h2')`
-    margin-bottom: 20px;
-`;
-
-const Content = styled('div')`
-    line-height: 24px;
     margin-bottom: 20px;
 `;
 
