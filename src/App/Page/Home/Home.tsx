@@ -32,36 +32,39 @@ export const Home = (props: HomePropsType) => {
             <GridImage src={img2} setMinHeight={true} />
 
             <GridCell>
-                <Title>Co robimy?:</Title>
+                <Title>Co robimy?</Title>
                 <Content>
                     <Ul>
-                        <li>Budujemy własne królestwa</li>
+                        <li>Handlujemy kamieniami szlachetnymi</li>
                         <li>Zdobywamy K2 zimą</li>
                         <li>Terraformujemy Marsa</li>
-                        <li>Handlujemy kamieniami szlachetnymi</li>
-                        <li>Tworzymy własne cywilizacje</li>
+                        <li>Rozwijamy własne cywilizacje</li>
                         <li>Walczymy o życie na bezludnej wyspie</li>
+                        <li>Ratujemy ludzkość przed pandemią</li>
+                        <li>Budujemy własne królestwa</li>
                     </Ul>
                 </Content>
             </GridCell>
 
             <GridCell>
-                <Title>W co gramy?:</Title>
+                <Title>W co gramy?</Title>
                 <Content>
-                    <div>Najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach i festiwalach na całym świecie.</div>
-                    <div>Na przykład: Carrcassonne, Splendor, Królestwo w budowie, Wsiąść do pociągu, Sabotażysta, K2, Kolejka, Neuroshima Hex, Timeline oraz wiele innych.</div>
+                    <Ul>
+                        <li>Najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach i festiwalach na całym świecie.</li>
+                        <li>Na przykład: Carrcassonne, Splendor, Królestwo w budowie ,Wsiąść do pociągu, Sabotażysta, K2, Neuroshima Hex, 7 Cudów Świata, Timeline, Tajniacy oraz wiele innych.</li>
+                    </Ul>
                 </Content>
             </GridCell>
 
             <GridCell>
                 <Title>Forma zajęć:</Title>
                 <Content>
-                    <div>Jak wyglądają zajęcia:</div>
                     <Ul>
-                        <li>trwają 2 godziny</li>
-                        <li>tłumaczone są zasady gry</li>
-                        <li>gramy tylko i wyłącznie w najlepsze gry,</li>
-                        <li>w drugiej części zajęć chętni grają turniej a pozostali w ulubione gry</li>
+                        <li>Trwają 2 godziny</li>
+                        <li>Tłumaczone są zasady gier</li>
+                        <li>Przystępujemy do rozgrywek</li>
+                        <li>W drugiej części chętni grają turniej, a pozostali w ulubione gry</li>
+                        <li>Na każdych zajęciach zapozanjemy się z nową grą</li>
                     </Ul>
                 </Content>
             </GridCell>
@@ -70,14 +73,14 @@ export const Home = (props: HomePropsType) => {
                 <Title>Planszówki to:</Title>
                 <Content>
                     <Ul>
-                        <li>rozwój intelektualny</li>
-                        <li>nauka strategicznego myślenia</li>
-                        <li>rywalizacja</li>
-                        <li>współpraca</li>
-                        <li>odprężenie po zajęciach lekcyjnych</li>
-                        <li>alternatywa dla gier komputerowych, smartfonów</li>
-                        <li>zacieśnienie relacji z rówieśnikami</li>
-                        <li>nauka radzenia sobie z porażką</li>
+                        <li>Rozwój intelektualny</li>
+                        <li>Nauka strategicznego myślenia</li>
+                        <li>Rywalizacja</li>
+                        <li>Współpraca</li>
+                        <li>Odprężenie po zajęciach lekcyjnych</li>
+                        <li>Alternatywa dla gier komputerowych i smartfonów</li>
+                        <li>Zacieśnienie relacji z rówieśnikami</li>
+                        <li>Nauka radzenia sobie z porażką</li>
                     </Ul>
                 </Content>
             </GridCell>
