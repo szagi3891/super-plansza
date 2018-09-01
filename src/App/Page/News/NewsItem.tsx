@@ -10,7 +10,7 @@ const Title = styled('h2')`
 export interface NewsItemType {
     title: string,
     content: string,
-    date:string,
+    date: string | null,
 }
 
 interface PropsType {
@@ -41,14 +41,26 @@ export class NewsItem extends React.PureComponent<PropsType> {
     }
 
     private leftColumn() {
-        const { title, content, date } = this.props.data;
+        const { title, content } = this.props.data;
 
         return (
             <React.Fragment>
                 <Title>{title}</Title>
                 <Content>{content}</Content>
-                <div>{date}</div>
+                { this.renderDate() }
             </React.Fragment>
         )
+    }
+
+    private renderDate() {
+        const { date } = this.props.data;
+
+        if (date !== null) {
+            return (
+                <div>{date}</div>
+            );
+        }
+
+        return null;
     }
 }

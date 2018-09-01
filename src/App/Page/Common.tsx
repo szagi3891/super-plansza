@@ -31,7 +31,6 @@ export const GridCell = styled('div')`
 `;
 
 export const GridRowFull = styled('div')`
-    padding: 10px;
     grid-column-start: 1;
     grid-column-end: 4;
 `;

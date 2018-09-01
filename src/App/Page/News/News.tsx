@@ -7,15 +7,7 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
-    title: 'Zajęcia w II LO w Chrzanowie na start!',
-    /* content: `
-        Z przyjemnością informuję, że pierwsze i drugie zajęcia z grami planszowymi ,
-        które odbędą się w II LO w Chrzanowie w październiku
-        będą bezpłatne. 
-        Zapraszam młodzież i dzieci w wieku od lat 8 na 120 minut dobrej
-        zabawy w piątek 12 i 26.10.2018r.
-    `,
-    */
+    title: 'Zajęcia w II LO w Chrzanowie na start !',
     content: `
         Z przyjemnością informuję, że w roku szkolnym 2018/19 od października rozpoczyna działalność Klub Nowoczesnych Gier Planszowych.
         Zapraszam dzieci od lat 8 uczące się w szkołach podstawowych i młodzież szkół średnich na 120 minut dobrej rozgrywki i rozrywki.
@@ -23,19 +15,17 @@ const data: Array<NewsItemType> = [{
         Szczegółowe informację dotyczące terminu zajęć podane zostaną wkrótce na stronie. 
     `,
     date: '2018-08-12'
-}/*,{
-    title: 'Wiadomosć nr 2 (starsza)',
-    content: `Z przyjemnością informuję, że pierwsze i drugie zajęcia z grami planszowymi , które odbędą się w II LO w Chrzanowie w miesiącu październiku`,
-    date: '2018-08-02',
+
 },{
-    title: 'Wiadomosć nr 3 (starsza)',
-    content: `Z przyjemnością informuję, że pierwsze i drugie zajęcia z grami planszowymi , które odbędą się w II LO w Chrzanowie w miesiącu październiku`,
-    date: '2018-06-22',
-}*/];
+    title: 'Październik GRATIS [Cennik zajęć]',
+    content: `W październiku w II Liceum Ogólnokształcącym rozpocznie działalność Klub Nowoczesnych Gier Planszowych. Cena pojedynczych zajęć (120min) to 10zł (20zł/miesiąc). Szczegóły znajdują się w zakładce Cennik.`,
+    date: null,
+}];
 
 const LinkInner = styled('span')`
     display: block;
     color: blue;
+    cursor: pointer;
 `;
 
 interface PropsType {
@@ -53,10 +43,13 @@ export class News extends React.PureComponent<PropsType> {
             <React.Fragment>
                 { this.renderList(listToShow) }
 
-                <GridRowFull>
-                    { mainView && data.length > NEWS_IN_MAIN_PAGE ? this.renderLink() : null}
-                    <hr/>
-                </GridRowFull>
+                { mainView && data.length > NEWS_IN_MAIN_PAGE ? this.renderLink() : null}
+
+                { mainView ? (
+                    <GridRowFull>
+                        <hr/>
+                    </GridRowFull>
+                ) : null }
 
             </React.Fragment>
         );
@@ -64,7 +57,9 @@ export class News extends React.PureComponent<PropsType> {
 
     private renderList(listToShow: Array<NewsItemType>) {
         return listToShow.map(
-            (item, index) => <NewsItem key={item.date} data={item} showImg={index === 0} />
+            (item, index) => (
+                <NewsItem key={item.title} data={item} showImg={index === 0} />
+            )
         );
     }
 
