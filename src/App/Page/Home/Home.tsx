@@ -60,11 +60,11 @@ export const Home = (props: HomePropsType) => {
                 <Title>Forma zajęć:</Title>
                 <Content>
                     <Ul>
+                        <li>Przeznaczone dla dzieci i młodzieży szkół podstawowych i średnich</li>
                         <li>Trwają 2 godziny</li>
-                        <li>Tłumaczone są zasady gier</li>
-                        <li>Przystępujemy do rozgrywek</li>
-                        <li>W drugiej części chętni grają turniej, a pozostali w ulubione gry</li>
-                        <li>Na każdych zajęciach zapozanjemy się z nową grą</li>
+                        <li>Tłumaczone są zasady gry</li>
+                        <li>Gramy tylko i wyłącznie w najlepsze gry</li>
+                        <li>W drugiej części zajęć chętni grają turniej a pozostali w ulubione gry</li>
                     </Ul>
                 </Content>
             </GridCell>
