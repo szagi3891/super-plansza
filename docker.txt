@@ -103,3 +103,9 @@ docker diff dzialajacy_drupal
 
 odpalanie rethinkdb:
         docker run --name some-rethink -v "$PWD:/data" -d rethinkdb
+
+
+
+[root@superplansza ~]# systemctl start docker
+[root@superplansza ~]# docker run -d -p 80:8080 szagi3891/superplansza:0.4
+

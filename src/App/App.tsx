@@ -19,12 +19,14 @@ var colorMainColumn = Color(colorBackground).lighten(0.5);
 
 const Background = styled('div')`
     background-color: ${colorBackground};
+    height: 100vh;
+    overflow-y: auto;
 `;
 
 const Wrapper = styled('div')`
     position: relative;
     width: 1024px;
-    margin: -150px auto 0;
+    margin: 300px auto 0;
     background-color: ${colorMainColumn.string()};
     min-height: 100vh;
     padding-top: 20px;
@@ -53,6 +55,20 @@ interface PropsType {
     appState: AppState,
 }
 
+const WrapperBg1 = styled('div')`
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+`;
+
+const WrapperBg2  = styled('div')`
+    height: 100vh;
+    overflow-y: auto;
+    position: relative;
+`;
+
 @observer
 export class App extends React.Component<PropsType> {
     render() {
@@ -61,25 +77,30 @@ export class App extends React.Component<PropsType> {
 
         return (
             <Background>
-                <Header />
-                <Wrapper>
-                    <HeaderBox>
-                        <HeaderText role="main">"SUPER PLANSZA"</HeaderText>
-                        <HeaderText role="subtitle">Spotkania przy nowoczesnych grach planszowych</HeaderText>
-                    </HeaderBox>
+                <WrapperBg1>
+                    <Header />
+                </WrapperBg1>
 
-                    <Row>
-                        <Menu appState={appState} />
-                    </Row>
+                <WrapperBg2>
+                    <Wrapper>
+                        <HeaderBox>
+                            <HeaderText role="main">"SUPER PLANSZA"</HeaderText>
+                            <HeaderText role="subtitle">Spotkania przy nowoczesnych grach planszowych</HeaderText>
+                        </HeaderBox>
 
-                    <Grid>
-                        { page === 'home' ? <Home appState={appState} /> : null}
-                        { page === 'news' ? <News appState={appState} mainView={false} /> : null }
-                        { page === 'cennik' ? <Cennik /> : null }
-                        { page === 'contact' ? <Contact /> : null }
-                    </Grid>
+                        <Row>
+                            <Menu appState={appState} />
+                        </Row>
 
-                </Wrapper>
+                        <Grid>
+                            { page === 'home' ? <Home appState={appState} /> : null}
+                            { page === 'news' ? <News appState={appState} mainView={false} /> : null }
+                            { page === 'cennik' ? <Cennik /> : null }
+                            { page === 'contact' ? <Contact /> : null }
+                        </Grid>
+
+                    </Wrapper>
+                </WrapperBg2>
             </Background>
         );
     }
