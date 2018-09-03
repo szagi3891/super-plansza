@@ -13,6 +13,7 @@ import { Contact } from './Page/Contact/Contact';
 import { AppState } from 'AppState/AppState';
 import { observer } from 'mobx-react';
 import { Cennik } from './Page/Cennik/Cennik';
+import { Helmet } from "react-helmet";
 
 const colorBackground = Theme.background;
 var colorMainColumn = Color(colorBackground).lighten(0.5);
@@ -93,10 +94,38 @@ export class App extends React.Component<PropsType> {
                         </Row>
 
                         <Grid>
-                            { page === 'home' ? <Home appState={appState} /> : null}
-                            { page === 'news' ? <News appState={appState} mainView={false} /> : null }
-                            { page === 'cennik' ? <Cennik /> : null }
-                            { page === 'contact' ? <Contact /> : null }
+                            { page === 'home' ? (
+                                <React.Fragment>
+                                    <Home appState={appState} />
+                                    <Helmet>
+                                        <title>Strona główna</title>
+                                    </Helmet>
+                                </React.Fragment>
+                             ) : null}
+                            { page === 'news' ? (
+                                <React.Fragment>
+                                    <News appState={appState} mainView={false} />
+                                    <Helmet>
+                                        <title>Aktualności</title>
+                                    </Helmet>
+                                </React.Fragment>
+                            ) : null }
+                            { page === 'cennik' ? (
+                                <React.Fragment>
+                                    <Cennik />
+                                    <Helmet>
+                                        <title>Cennik</title>
+                                    </Helmet>
+                                </React.Fragment>
+                            ) : null }
+                            { page === 'contact' ? (
+                                <React.Fragment>
+                                    <Contact />
+                                    <Helmet>
+                                        <title>Kontakt</title>
+                                    </Helmet>
+                                </React.Fragment>
+                            ) : null }
                         </Grid>
 
                     </Wrapper>

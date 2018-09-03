@@ -16,11 +16,11 @@ const data: Array<NewsItemType> = [{
     `,
     date: '2018-08-12'
 
-},{
+}/*,{
     title: 'Październik GRATIS [Cennik zajęć]',
     content: `W październiku w II Liceum Ogólnokształcącym rozpocznie działalność Klub Nowoczesnych Gier Planszowych. Cena pojedynczych zajęć (120min) to 10zł (20zł/miesiąc). Szczegóły znajdują się w zakładce Cennik.`,
     date: null,
-}];
+}*/];
 
 const LinkInner = styled('span')`
     display: block;
