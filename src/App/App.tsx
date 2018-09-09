@@ -7,7 +7,7 @@ import { Row } from './Utils';
 import { Home } from './Page/Home/Home';
 import { Header } from './Header/Header';
 import { Theme } from './Theme';
-import { Header as HeaderText } from './Page/Common';
+import { Header as HeaderText, Grid } from './Page/Common';
 import { News } from './Page/News/News';
 import { Contact } from './Page/Contact/Contact';
 import { AppState } from 'AppState/AppState';
@@ -26,7 +26,8 @@ const Background = styled('div')`
 
 const Wrapper = styled('div')`
     position: relative;
-    width: 1024px;
+    width: 100%;
+    max-width: 1024px;
     margin: 300px auto 0;
     background-color: ${colorMainColumn.string()};
     min-height: 100vh;
@@ -41,15 +42,6 @@ const HeaderBox = styled('div')`
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
-`;
-
-const Grid = styled('div')`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
 `;
 
 interface PropsType {
