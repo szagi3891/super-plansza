@@ -19,12 +19,29 @@ const Background = styled('div')`
     position: relative;
 `;
 
+const generateMedia = (rule: string) => {
+    const out: Array<string> = [];
+
+    for (let width = 300; width < 1024; width = width + 10) {
+        const height = Math.floor((width * 300) / 1024);
+        out.push(`
+            @media (min-width: ${width}px) {
+                ${rule}: ${height}px;
+            }
+        `);
+    }
+
+    return out.join('\n');
+};
+
 const WrapperBg1 = styled('div')`
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
-    height: 300px;
+
+    height: 85px;
+    ${generateMedia('height')}
 
     display: flex;
 `;
@@ -39,7 +56,11 @@ const Wrapper = styled('div')`
     position: relative;
     width: 100%;
     max-width: 1024px;
-    margin: 300px auto 0;
+    margin: 0 auto 0;
+
+    margin-top: 85px;
+    ${generateMedia('margin-top')}
+
     background-color: ${colorMainColumn.string()};
     min-height: 100vh;
     padding-top: 20px;
