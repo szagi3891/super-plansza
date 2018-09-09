@@ -31,8 +31,9 @@ interface ImageHeaderPropsType {
 }
 
 const Wrapper = styled('div')`
-    width: 100%;
-    height: 300px;
+    /* width: 100%;
+    height: 300px; */
+    flex-grow: 1;
     position: relative;
 `;
 
