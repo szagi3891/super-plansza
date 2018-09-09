@@ -11,6 +11,7 @@ const menuColorHover = Color(menuColor).alpha(.5).string();
 const Wrapper = styled('div')`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 `;
 
 interface ItemPropsType {
@@ -21,6 +22,7 @@ const Item = styled('span')<ItemPropsType>`
     border: 1px solid black;
     padding: 5px;
     margin-right: 10px;
+    margin-bottom: 10px;
     background-color: ${menuColor};
     cursor: pointer;
     border-radius: 2px;

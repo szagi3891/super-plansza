@@ -5,6 +5,9 @@ import styled from 'react-emotion';
 const Iframe = styled('iframe')`
     display: block;
     margin: 0 auto;
+    width: 100%;
+    max-width: 700px;
+    height: 700px;
 `;
 
 const Header = styled('h2')`
@@ -17,16 +20,22 @@ export class Contact extends React.PureComponent {
             <GridRowFull>
                 <Content>
                     <Header>Kontakt</Header>
-                    <div>1. W przypadku pytań dotyczących działalności koła SUPERPLANSZA proszę o kontakt wysyłając wiadomość na adres: superplansza@protonmail.com.</div>
+
                     <br/>
 
-                    <div>2, Poniżej znajduje się link do rejestracji uczestnika zajęć oraz jego rodzica/ów / opiekuna/ów. Zostaw tam swoje podstawowe dane przypisując je do swojego dziecka.</div>
+                    <div>
+                        E-mail:: <a href="mailto:superplansza@gmail.com">superplansza@gmail.com</a><br/>
+                        Tel. 516 116 149
+                    </div>
+                    <br/>
+
+                    <div>
+                        Wypełnij poniższy formularz aby na bieżąco być informowanym o działalności klubu, np. o terminie najbliższych zajęć lub o zmianach terminu.
+                    </div>
                     <br/>
 
                     <Iframe
                         src="https://docs.google.com/forms/d/e/1FAIpQLSeXqELOJGLPBcb_8q7hGQAbUqlkRh9-5KrvTbCnywzpXt678w/viewform?embedded=true"
-                        width="700"
-                        height="700"
                         frameBorder="0"
                     >
                         Ładuję...

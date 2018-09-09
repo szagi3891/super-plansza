@@ -20,8 +20,10 @@ var colorMainColumn = Color(colorBackground).lighten(0.5);
 
 const Background = styled('div')`
     background-color: ${colorBackground};
+    min-width: 300px;
     height: 100vh;
     overflow-y: auto;
+    position: relative;
 `;
 
 const Wrapper = styled('div')`

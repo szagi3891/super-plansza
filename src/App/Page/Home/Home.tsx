@@ -49,10 +49,10 @@ export const Home = (props: HomePropsType) => {
             <GridCell>
                 <Title>W co gramy?</Title>
                 <Content>
-                    <Ul>
-                        <li>Najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach i festiwalach na całym świecie.</li>
-                        <li>Na przykład: Carrcassonne, Splendor, Królestwo w budowie ,Wsiąść do pociągu, Sabotażysta, K2, Neuroshima Hex, 7 Cudów Świata, Timeline, Tajniacy oraz wiele innych.</li>
-                    </Ul>
+                    Najlepsze gry planszowe zdobywające nagrody i wyróżnienia na międzynarodowych konkursach
+                    i festiwalach na całym świecie. Na przykład: Carrcassonne, Splendor, Królestwo w budowie
+                    ,Wsiąść do pociągu, Sabotażysta, K2, Neuroshima Hex, 7 Cudów Świata, Timeline,
+                    Tajniacy oraz wiele innych.
                 </Content>
             </GridCell>
 
