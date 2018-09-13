@@ -31,6 +31,7 @@
   "scripts": {
     "rm-dist": "rm -Rf ./docs",
     "build-dev": "yarn run rm-dist && webpack --config ./webpack/webpack.js --mode development && cp ./src/index.html ./docs/",
+    "build-prod": "yarn run rm-dist && webpack --config ./webpack/webpack.js --mode production && cp ./src/index.html ./docs/",
     "server": "yarn run http-server ./docs"
   }
 }

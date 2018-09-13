@@ -7,6 +7,13 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
+    title: 'Gramy w Gimnazjum nr 22 im. ks. Jana Twardowskiego w Krakowie',
+    content: `Serdecznie zapraszam  na spotkanie z nowoczesnymi grami planszowymi, które odbędzie się w Gimnazjum nr 22 w Krakowie. Zajęcia w październiku będą nieodpłatne.
+
+Dokładna data i godzina zostanie podana wkrótce.
+`,
+    date: '2018-09-12'
+},{
     title: 'Zajęcia w II LO w Chrzanowie na start !',
     content: `
         Z przyjemnością informuję, że w roku szkolnym 2018/19 od października rozpoczyna działalność Klub Nowoczesnych Gier Planszowych.
