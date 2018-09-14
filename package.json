@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@types/color": "^3.0.0",
+    "@types/express": "^4.16.0",
     "@types/react": "^16.4.8",
     "@types/react-dom": "^16.0.7",
     "@types/react-helmet": "^5.0.7",
@@ -15,8 +16,8 @@
     "awesome-typescript-loader": "^5.2.0",
     "color": "^3.0.0",
     "emotion": "^9.2.6",
+    "express": "^4.16.3",
     "file-loader": "2",
-    "http-server": "^0.11.1",
     "mobx": "^5.0.5",
     "mobx-react": "^5.2.5",
     "react": "^16.4.2",
@@ -29,9 +30,9 @@
     "webpack-cli": "^3.1.0"
   },
   "scripts": {
-    "rm-dist": "rm -Rf ./docs",
-    "build-dev": "yarn run rm-dist && webpack --config ./webpack/webpack.js --mode development && cp ./src/index.html ./docs/",
-    "build-prod": "yarn run rm-dist && webpack --config ./webpack/webpack.js --mode production && cp ./src/index.html ./docs/",
-    "server": "yarn run http-server ./docs"
+    "rm-dist": "rm -Rf ./dist",
+    "build-dev": "yarn run rm-dist && webpack --config ./webpack/webpack.js --mode development && cp ./src/index.html ./dist",
+    "build-prod": "yarn run rm-dist && webpack --config ./webpack/webpack.js --mode production && cp ./src/index.html ./dist",
+    "server": "node ./dist/server"
   }
 }

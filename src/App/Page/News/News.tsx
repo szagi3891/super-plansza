@@ -7,7 +7,12 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
-    title: 'Gramy w Gimnazjum nr 22 im. ks. Jana Twardowskiego w Krakowie',
+    title: 'Październik w II LO w Chrzanowie wstęp wolny',
+    content: 'Pierwsze spotkanie z nowoczesnymi grami planszowymi odbędzie się w dniu  12października (piątek) o godzinie 15.30 w budynku II LO w Chrzanowie w Sali 04. Zagramy w super gry – dobra zabawa gwarantowana. Zapraszamy.',
+    date: '2018-09-14'
+
+}, {
+    title: 'Gramy w Szkole Podstawowej nr 110 im. ks. Jana Twardowskiego w Krakowie',
     content: `Serdecznie zapraszam  na spotkanie z nowoczesnymi grami planszowymi, które odbędzie się w Gimnazjum nr 22 w Krakowie. Zajęcia w październiku będą nieodpłatne.
 
 Dokładna data i godzina zostanie podana wkrótce.

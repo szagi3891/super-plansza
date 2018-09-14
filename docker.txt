@@ -109,3 +109,9 @@ odpalanie rethinkdb:
 [root@superplansza ~]# systemctl start docker
 [root@superplansza ~]# docker run -d -p 80:8080 szagi3891/superplansza:0.4
 
+
+serwuje pliki statyczne
+yarn run http-server ./docs
+
+
+docker rmi image -- usunięcie obrazu
