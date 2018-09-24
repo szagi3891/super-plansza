@@ -17,7 +17,7 @@ const data: Array<NewsItemType> = [{
 
 }, {
     title: 'Gramy w Szkole Podstawowej nr 110 im. ks. Jana Twardowskiego w Krakowie',
-    content: `Serdecznie zapraszam  na spotkanie z nowoczesnymi grami planszowymi, które odbędzie się w Gimnazjum nr 22 w Krakowie. Zajęcia w październiku będą nieodpłatne.
+    content: `Serdecznie zapraszam  na spotkanie z nowoczesnymi grami planszowymi, które odbędzie się w Szkole Podstawowej nr 110 w Krakowie. Zajęcia w październiku będą nieodpłatne.
 
 Dokładna data i godzina zostanie podana wkrótce.
 `,
