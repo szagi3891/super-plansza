@@ -7,10 +7,14 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
+    title: "Gramy w Krakowie i Chrzanowie (Październik)",
+    content: "Najbliższe spotkanie z grami planszowymi odbędzie się 23 października o godzinie 15.00 w Szkole Podstawowej nr 110 w Krakowie. Kolejne 24 października w SP nr 19 i XXVII LO w Krakowie o godz. 15.20 i 26 października w ILO w Chrzanowie. Wszystkie spotkania to bezpłatne zajęcia próbne. Będzie okazja żeby poznać światowe klasyki takie jak Splendor, Królestwo w Budowie, Carcassone, Kolejka lub inne. Serdecznie zapraszamy uczniów szkół podstawowych i średnich. Weź ze sobą siostrę , brata, koleżankę i kolegę. Zapraszamy!",
+    date: '2018-10-14'
+}, {
     title: "Planszówki w SP nr 19 i XXVII LO w Krakowie",
     content: "Zapraszamy dzieci od lat 8 i młodzież na pierwsze spotkanie z nowoczesnymi grami planszowymi, które odbędzie się w dniu  10 października (środa) o godzinie 15.20 do 17.20 w budynku Zespołu Szkół Ogólnokształcących przy ul. Senatorskiej 35 w Krakowie. Zaproś kolegów i koleżanki i rywalizujcie w emocjonujących rozgrywkach przy ciekawych grach planszowych. W październiku opłaty nie obowiązują.",
     date: '2018-09-18'
-},{
+}, {
     title: 'Październik w II LO w Chrzanowie wstęp wolny',
     content: 'Pierwsze spotkanie z nowoczesnymi grami planszowymi odbędzie się w dniu  12października (piątek) o godzinie 15.30 w budynku II LO w Chrzanowie w Sali 04. Zagramy w super gry – dobra zabawa gwarantowana. Zapraszamy.',
     date: '2018-09-14'
@@ -22,7 +26,7 @@ const data: Array<NewsItemType> = [{
 Dokładna data i godzina zostanie podana wkrótce.
 `,
     date: '2018-09-12'
-},{
+}, {
     title: 'Zajęcia w II LO w Chrzanowie na start !',
     content: `
         Z przyjemnością informuję, że w roku szkolnym 2018/19 od października rozpoczyna działalność Klub Nowoczesnych Gier Planszowych.
