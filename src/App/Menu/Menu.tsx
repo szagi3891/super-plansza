@@ -74,6 +74,7 @@ export class Menu extends React.Component<MenuPropsType> {
                 <MenuItem appState={appState} page="home">Strona główna</MenuItem>
                 <MenuItem appState={appState} page="news">Aktualności</MenuItem>
                 { /* <MenuItem appState={appState} page="cennik">Cennik</MenuItem> */ }
+                <MenuItem appState={appState} page="lokalizacje">Lokalizacje</MenuItem>
                 <MenuItem appState={appState} page="contact">Kontakt</MenuItem>
             </Wrapper>
         );

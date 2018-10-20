@@ -25,7 +25,7 @@ export class Contact extends React.PureComponent {
 
                     <div>
                         E-mail:: <a href="mailto:superplansza@gmail.com">superplansza@gmail.com</a><br/>
-                        Tel. 516 116 149
+                        Tel. 720 765 365
                     </div>
                     <br/>
 
