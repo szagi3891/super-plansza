@@ -38,7 +38,7 @@ export class  AppContent extends React.Component<PropsType> {
         return (
             <React.Fragment>
                 <HeaderBox>
-                    <HeaderText role="main">"SUPER PLANSZA"</HeaderText>
+                    <HeaderText role="main">"SUPERPLANSZA"</HeaderText>
                     <HeaderText role="subtitle">Spotkania przy nowoczesnych grach planszowych</HeaderText>
                 </HeaderBox>
 

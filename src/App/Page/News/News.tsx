@@ -7,6 +7,13 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
+    title: 'Zapisy na zajęcia',
+    content: `
+        Serdecznie zapraszamy do zapisywania dzieci na odbywające się lub planowane zajęcia w Twojej Szkole.
+        Na pozostawione dane kontaktowe otrzymasz informacje o dacie i godzinie pierwszych i kolejnych zajęć.
+    `,
+    date: '2018-11-18'
+}, {
     title: "Gramy w Krakowie i Chrzanowie (Październik)",
     content: "Najbliższe spotkanie z grami planszowymi odbędzie się 23 października o godzinie 15.00 w Szkole Podstawowej nr 110 w Krakowie. Kolejne 24 października w SP nr 19 i XXVII LO w Krakowie o godz. 15.20 i 26 października w ILO w Chrzanowie. Wszystkie spotkania to bezpłatne zajęcia próbne. Będzie okazja żeby poznać światowe klasyki takie jak Splendor, Królestwo w Budowie, Carcassone, Kolejka lub inne. Serdecznie zapraszamy uczniów szkół podstawowych i średnich. Weź ze sobą siostrę , brata, koleżankę i kolegę. Zapraszamy!",
     date: '2018-10-14'
@@ -35,7 +42,6 @@ Dokładna data i godzina zostanie podana wkrótce.
         Szczegółowe informację dotyczące terminu zajęć podane zostaną wkrótce na stronie. 
     `,
     date: '2018-08-12'
-
 }];
 
 const LinkInner = styled('span')`

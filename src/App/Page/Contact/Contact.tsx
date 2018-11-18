@@ -30,7 +30,8 @@ export class Contact extends React.PureComponent {
                     <br/>
 
                     <div>
-                        Wypełnij poniższy formularz aby na bieżąco być informowanym o działalności klubu, np. o terminie najbliższych zajęć lub o zmianach terminu.
+                    Wypełnij poniższy formularz aby na bieżąco być informowanym o terminie pierwszych i kolejnych zajęć lub o zmianach terminu.
+                    W przypadku dużej liczby chętnych o uczestnictwie decyduje kolejność zapisów.
                     </div>
                     <br/>
 
