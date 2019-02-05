@@ -7,6 +7,16 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
+    title: 'Zajęcia w Szkole P. Nr 30 przy ul. Konfederackiej 12',
+    content: `
+    Miło nam poinformować, że 12 lutego 2019r w Szkole Podstawowej nr 30 przy ul. Konfederackiej 12 ruszają zajęcia z nowoczesnych gier planszowych. Będą odbywać się w godzinach  14.30 – 16.30 w Sali nr 9. Kolejne przewidziane są na 26 luty, 12 i 26 marzec, 10 i 24 kwiecień, 8 i 22 maj oraz 5 czerwiec.
+    
+    Pierwsze zajęcia (12 lutego) będą bezpłatne. Każde kolejne to koszt 15zł.
+    
+    Zapraszamy!
+`,
+    date: '2019-02-05'
+}, {
     title: 'Zapisy na zajęcia',
     content: `
         Serdecznie zapraszamy do zapisywania dzieci na odbywające się lub planowane zajęcia w Twojej Szkole.

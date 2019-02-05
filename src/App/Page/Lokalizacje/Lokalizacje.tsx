@@ -9,6 +9,27 @@ export class Lokalizacje extends React.PureComponent {
             <React.Fragment>
                 <GridRowShort>
                     <Content>
+                        <h2>Kraków</h2>
+                        <p>Szkoła Podstawowa z Oddziałem Integracyjnym nr 30</p>
+                        <p>ul. Konfederacka 12</p>
+                        <p>Kraków</p>
+                        <p>Sala nr 9</p>
+
+                        <br/>
+
+                        <h2>Chrzanów</h2>
+                        <p>II Liceum Ogólnokształcące</p>
+                        <p>ul. Kardynała Wyszyńskiego 19</p>
+                        <p>sala nr 04</p>
+
+                        <br/>
+                        <br/>
+
+                        <p>	Informacje o datach i godzinach podawane są na bieżaco w Aktualnościach</p>
+
+                    </Content>
+                    { /*
+                    <Content>
                         <h2>Chrzanów</h2>
                         <p>II Liceum Ogólnokształcące</p>
 	                    <p>ul. Kardynała Wyszyńskiego 19</p>
@@ -33,6 +54,7 @@ export class Lokalizacje extends React.PureComponent {
                         <p>	Informacje o datach i godzinach podawane są na bieżaco w Aktualnościach</p>
                     
                     </Content>
+                    */ }
                 </GridRowShort>
                 <GridImage src={syrenki} setMinHeight={false} />
             </React.Fragment>
