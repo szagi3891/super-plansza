@@ -11,6 +11,7 @@ import { observer } from 'mobx-react';
 import { Cennik } from './Page/Cennik/Cennik';
 import { Helmet } from "react-helmet";
 import { Lokalizacje } from './Page/Lokalizacje/Lokalizacje';
+import { Wypozyczalnia } from './Page/Wypozyczalnia/Wypozyczalnia';
 
 const HeaderBox = styled('div')`
     display: flex;
@@ -77,6 +78,10 @@ export class  AppContent extends React.Component<PropsType> {
             return this.renderLokalizacje();
         }
 
+        if (page === 'wypozyczalnia') {
+            return this.renderWypozyczalnia();
+        }
+
         assertNever('Nieprawidłowe odgałęzienie', page);
     }
 
@@ -132,6 +137,17 @@ export class  AppContent extends React.Component<PropsType> {
                 <Lokalizacje />
                 <Helmet>
                     <title>Lokalizacje</title>
+                </Helmet>
+            </React.Fragment>
+        );
+    }
+
+    private renderWypozyczalnia() {
+        return (
+            <React.Fragment>
+                <Wypozyczalnia />
+                <Helmet>
+                    <title>Wypożyczalnia</title>
                 </Helmet>
             </React.Fragment>
         );
