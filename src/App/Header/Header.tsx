@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const photo01 = require('./fotodonagwka/N1adrenaline.jpg');
 //const photo02 = require('./fotodonagwka/N2civ_box_3d.jpg');

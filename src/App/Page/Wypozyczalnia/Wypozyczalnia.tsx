@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { observer } from "mobx-react";
 import { GridRowFull, Content } from '../Common';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const Header = styled('h2')`
     margin-bottom: 20px;
 `;
 
 const Table = styled('table')`
+    width: 100%;
     border-collapse: collapse;
 
     td {
@@ -27,7 +28,7 @@ export class Wypozyczalnia extends React.Component {
                 <p>OFERTA WYPOŻYCZALNI SUPERPLANSZA</p>
                 <p>Wypożycz grę odbierając ją w dniu zajęć i ciesz się rozrywką w swoim domu przez 14 dni. Następnie zwróć grę w dniu kolejnych zajęć.</p>
                 <p>Wypożyczając grę akceptujesz regulamin znajdujący się na stronie superplansza.pl</p>
-
+                <p>Kaucja [B=150zł, C=100zł, D=50zł</p>
                 <br/><br/>
 
                 <Table>
@@ -45,8 +46,6 @@ export class Wypozyczalnia extends React.Component {
                     </td>
                     <td>
                         <p ><b>Kaucja</b></p>
-                        <p ><b>[B=150zł,
-                        C=100zł, D=50zł]</b></p>
                     </td>
                     <td>
                         <p ><b>Cena</b></p>

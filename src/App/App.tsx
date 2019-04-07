@@ -1,12 +1,12 @@
 import * as React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import * as Color from 'color';
-import './Reset.tsx';
 import { Header } from './Header/Header';
 import { Theme } from './Theme';
 import { AppState } from 'AppState/AppState';
 import { observer } from 'mobx-react';
 import { AppContent } from './AppContent';
+import { ResetCss } from './Reset';
 
 const colorBackground = Theme.background;
 var colorMainColumn = Color(colorBackground).lighten(0.5);
@@ -76,17 +76,20 @@ export class App extends React.Component<PropsType> {
         const { appState} = this.props;
 
         return (
-            <Background>
-                <WrapperBg1>
-                    <Header />
-                </WrapperBg1>
+            <>
+                <ResetCss />
+                <Background>
+                    <WrapperBg1>
+                        <Header />
+                    </WrapperBg1>
 
-                <WrapperBg2>
-                    <Wrapper>
-                        <AppContent appState={appState} />
-                    </Wrapper>
-                </WrapperBg2>
-            </Background>
+                    <WrapperBg2>
+                        <Wrapper>
+                            <AppContent appState={appState} />
+                        </Wrapper>
+                    </WrapperBg2>
+                </Background>
+            </>
         );
     }
 }

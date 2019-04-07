@@ -1,7 +1,11 @@
-import { injectGlobal } from 'react-emotion';
+import * as React from 'react';
+import { Global, css } from '@emotion/core';
 import { Theme } from './Theme';
 
-injectGlobal `
+export const ResetCss = () => {
+	return (
+		<Global
+			styles={css`
 html,
 body,
 ul {
@@ -39,5 +43,7 @@ a:focus {
 * {
   color: ${Theme.color};
 }
-
-`;
+			`}
+		/>
+	);
+}

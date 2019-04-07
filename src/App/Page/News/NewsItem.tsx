@@ -1,8 +1,6 @@
 import * as React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { GridRowShort, GridImage, GridRowFull, Content } from '../Common';
-//const firstPhoto = require('./SP logo 5.jpg');
-//import firstPhoto from './News.jpg';
 const firstPhoto = require('./News.jpg');
 
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { GridRowFull, Content } from '../Common';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 const Iframe = styled('iframe')`
     display: block;

@@ -15,9 +15,6 @@ app.get('/', (_req, res) => {
     res.sendFile(pathIndex);
 });
 
-server.listen(8080, (err: unknown) => {
-    if (err) {
-        console.log(err);
-        return;
-    }
+server.listen(8080, () => {
+    console.info('Server start on 127.0.0.1:8080');
 });

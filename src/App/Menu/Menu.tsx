@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import * as Color from 'color';
 import { AppState, PageType } from 'AppState/AppState';
 import { observer } from 'mobx-react';

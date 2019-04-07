@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 import { NewsItem, NewsItemType } from './NewsItem';
 import { GridRowFull } from '../Common';
 import { AppState } from 'AppState/AppState';
@@ -7,6 +7,14 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
+    title: 'Kolejne zajęcia będą odbywały się we wtorki.',
+    content: 'Szanowni rodzice korygujemy harmonogram zajęć z gier planszowych dla Szkoły Podstawowej nr 30. Kolejne będą odbywały się w następujących dniach: 9 i 23 kwiecień, 7 i 21 maj, 4 czerwiec. Godziny bez zmian t.j 14.30 - 16.30, sala nr 10.',
+    date: '2019-04-07',
+}, {
+    title: 'Możesz wypożyczyć grę do domu',
+    content: 'W zakładce [Wypożyczalnia] znajdą Państwo szczegóły dotyczące możliwości wypożyczenia gier planszowych do domu. Grę można odebrać na zajęciach i zwrócić dwa tygodnie później na kolejnych zajęciach. Ceny są bardzo atrakcyjne. Wymagana jest kaucja.',
+    date: '2019-04-07'
+}, {
     title: 'Zajęcia w Szkole P. Nr 30 przy ul. Konfederackiej 12',
     content: `
     Miło nam poinformować, że 12 lutego 2019r w Szkole Podstawowej nr 30 przy ul. Konfederackiej 12 ruszają zajęcia z nowoczesnych gier planszowych. Będą odbywać się w godzinach  14.30 – 16.30 w Sali nr 9. Kolejne przewidziane są na 26 luty, 12 i 26 marzec, 10 i 24 kwiecień, 8 i 22 maj oraz 5 czerwiec.

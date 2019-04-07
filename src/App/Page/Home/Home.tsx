@@ -1,9 +1,7 @@
 import * as React from 'react';
-import styled from 'react-emotion';
-//import { News } from '../News/News';
+import styled from '@emotion/styled';
 import { GridImage, GridCell } from '../Common';
 import { AppState } from 'AppState/AppState';
-//const img1 = require('./home/1-image2.jpg');
 const img2 = require('./home/2-image3.jpg');
 const img3 = require('./home/3-image4.jpg');
 
