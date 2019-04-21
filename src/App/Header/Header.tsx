@@ -1,5 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import { observer } from 'mobx-react';
+import { observable } from 'mobx';
 
 const photo01 = require('./fotodonagwka/N1adrenaline.jpg');
 //const photo02 = require('./fotodonagwka/N2civ_box_3d.jpg');
@@ -50,27 +52,20 @@ const ImageHeader = styled('div')<ImageHeaderPropsType>`
     background-position: center;
 `;
 
-interface StateType {
-    current: number
-}
+@observer
+export class Header extends React.Component {
+    @observable current: number = 0;
 
-export class Header extends React.PureComponent<{}, StateType> {
     constructor(props: {}) {
         super(props);
 
-        this.state = {
-            current: 0
-        };
-
         setInterval(() => {
-            this.setState({
-                current: this.offsetIndex(1)
-            });
+            this.current = this.offsetIndex(1);
         }, 7000);
     }
 
     private offsetIndex(offset: number): number {
-        const newOffset = (this.state.current + offset) % photos.length;
+        const newOffset = (this.current + offset) % photos.length;
         return newOffset < 0 ? newOffset + photos.length : newOffset;
     }
 
@@ -83,7 +78,7 @@ export class Header extends React.PureComponent<{}, StateType> {
     }
 
     renderItem = (src: string, index: number) => {
-        const { current } = this.state;
+        const { current } = this;
 
         if (index === this.offsetIndex(-1) || index === current || index === this.offsetIndex(1)) {
             return (

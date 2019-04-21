@@ -7,6 +7,10 @@ import { AppState } from 'AppState/AppState';
 const NEWS_IN_MAIN_PAGE = 1;
 
 const data: Array<NewsItemType> = [{
+    title: 'Zajęcia 23 kwietnia są odwołane',
+    content: 'W związku z przerwą w zajęciach lekcyjnych, spotkanie z nowoczesnymi grami planszowymi nie odbędzie się 23 kwietnia (podobnie jak to się stało z zajęciami 9 kwietnia). Informacja o ewentualnie terminie zastępczym zostanie podana na niniejszej stronie internetowej.',
+    date: '2019-04-21',
+}, {
     title: 'Kolejne zajęcia będą odbywały się we wtorki.',
     content: 'Szanowni rodzice korygujemy harmonogram zajęć z gier planszowych dla Szkoły Podstawowej nr 30. Kolejne będą odbywały się w następujących dniach: 9 i 23 kwiecień, 7 i 21 maj, 4 czerwiec. Godziny bez zmian t.j 14.30 - 16.30, sala nr 10.',
     date: '2019-04-07',
